@@ -1,0 +1,79 @@
+/* ==========================================================================
+   ClearWater Documentation Theme
+   Based on the CE-QUAL-W2 ERDC documentation theme.
+   Primary: ERDC dark blue (#003366)
+   Accent: Water teal (#0097a7)
+   ========================================================================== */
+
+:root {
+  --md-primary-fg-color: #003366;
+  --md-primary-fg-color--light: #1a5276;
+  --md-primary-fg-color--dark: #001a33;
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: #0097a7;
+  --md-accent-fg-color--transparent: rgba(0, 151, 167, 0.1);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #4a90d9;
+  --md-accent-fg-color: #26c6da;
+}
+
+/* Custom admonition: ERDC-specific feature */
+.md-typeset .admonition.erdc-feature,
+.md-typeset details.erdc-feature {
+  border-color: #0097a7;
+}
+.md-typeset .erdc-feature > .admonition-title,
+.md-typeset .erdc-feature > summary {
+  background-color: rgba(0, 151, 167, 0.1);
+  border-color: #0097a7;
+}
+.md-typeset .erdc-feature > .admonition-title::before,
+.md-typeset .erdc-feature > summary::before {
+  background-color: #0097a7;
+  -webkit-mask-image: var(--md-admonition-icon--info);
+  mask-image: var(--md-admonition-icon--info);
+}
+
+/* Custom admonition: v2-specific note */
+.md-typeset .admonition.v2-note,
+.md-typeset details.v2-note {
+  border-color: #2e7d32;
+}
+.md-typeset .v2-note > .admonition-title,
+.md-typeset .v2-note > summary {
+  background-color: rgba(46, 125, 50, 0.1);
+  border-color: #2e7d32;
+}
+.md-typeset .v2-note > .admonition-title::before,
+.md-typeset .v2-note > summary::before {
+  background-color: #2e7d32;
+  -webkit-mask-image: var(--md-admonition-icon--note);
+  mask-image: var(--md-admonition-icon--note);
+}
+
+/* Parameter tables */
+.md-typeset table.parameter-table th {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  white-space: nowrap;
+}
+.md-typeset table.parameter-table {
+  font-size: 0.85rem;
+}
+
+/* Equation overflow - prevent scrollbar from wrapping to second line */
+.md-typeset mjx-container[jax="CHTML"] {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  max-width: 100% !important;
+  width: 100%;
+  min-width: 0;
+}
+
+.md-typeset mjx-container[jax="CHTML"][display="true"] {
+  display: block !important;
+  margin: 1em 0;
+  padding: 0.25em 0;
+}
