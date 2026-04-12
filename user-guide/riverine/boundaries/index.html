@@ -3105,9 +3105,9 @@
 
 
 <h1 id="boundary-conditions">Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Permanent link">&para;</a></h1>
-<p>ClearWater-Riverine applies constituent boundary conditions at the HEC-RAS 2D boundary lines that appear in the hydrodynamic plan file. Each boundary line carries a user-supplied time series of concentration values that the framework aligns with the model time axis, interpolates, and injects at the associated boundary faces. This page documents the initial condition and boundary condition CSV formats, the time alignment behavior, and the handling of inflow versus outflow faces.</p>
+<p>ClearWater-Riverine applies constituent boundary conditions at the HEC-RAS (Hydrologic Engineering Center's River Analysis System) 2D boundary lines that appear in the hydrodynamic plan file. Each boundary line carries a user-supplied time series of concentration values that the framework aligns with the model time axis, interpolates, and injects at the associated boundary faces. This page documents the initial condition and boundary condition CSV formats, the time alignment behavior, and the handling of inflow versus outflow faces.</p>
 <h2 id="initial-conditions">Initial Conditions<a class="headerlink" href="#initial-conditions" title="Permanent link">&para;</a></h2>
-<p>Initial conditions are specified per constituent in a CSV file. The file lists the starting concentration for each cell in the domain at the first model timestep.</p>
+<p>ClearWater-Riverine specifies initial conditions per constituent in a comma-separated values (CSV) file. The file lists the starting concentration for each cell in the domain at the first model timestep.</p>
 <h3 id="file-format">File Format<a class="headerlink" href="#file-format" title="Permanent link">&para;</a></h3>
 <p>The initial condition CSV requires two columns.</p>
 <table>
@@ -3141,7 +3141,7 @@
 </span></code></pre></div>
 <p>The loader for initial conditions is implemented in <code>Constituent.set_initial_conditions</code> in <code>src/clearwater_riverine/constituents.py</code>.</p>
 <h2 id="boundary-conditions_1">Boundary Conditions<a class="headerlink" href="#boundary-conditions_1" title="Permanent link">&para;</a></h2>
-<p>Boundary conditions are specified per constituent in a CSV file. The file lists time-varying concentration values for each HEC-RAS boundary line.</p>
+<p>ClearWater-Riverine specifies boundary conditions per constituent in a CSV file. The file lists time-varying concentration values for each HEC-RAS boundary line.</p>
 <h3 id="file-format_1">File Format<a class="headerlink" href="#file-format_1" title="Permanent link">&para;</a></h3>
 <p>The boundary condition CSV requires three columns.</p>
 <table>

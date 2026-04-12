@@ -3145,45 +3145,45 @@ Alk \approx [HCO_3^-] + 2[CO_3^{2-}] + [OH^-] - [H^+]
 <h2 id="role-in-water-quality">Role in Water Quality<a class="headerlink" href="#role-in-water-quality" title="Permanent link">&para;</a></h2>
 <p>Alkalinity in NSM1 is driven entirely by biologically mediated transformations of nitrogen and by autotrophic growth and respiration. The model includes six flux terms:</p>
 <ul>
-<li><strong>Nitrification</strong> of NH4 to NO3 releases H+ and decreases alkalinity.</li>
-<li><strong>Denitrification</strong> of NO3 to N2 consumes H+ and increases alkalinity.</li>
-<li><strong>Algal growth</strong> on NH4 consumes H+ and increases alkalinity; algal growth on NO3 releases H+ and decreases alkalinity.</li>
-<li><strong>Algal respiration</strong> releases NH4, consuming H+ and increasing alkalinity.</li>
+<li><strong>Nitrification</strong> of <code>NH4</code> to <code>NO3</code> releases H+ and decreases alkalinity.</li>
+<li><strong>Denitrification</strong> of <code>NO3</code> to <code>N2</code> consumes H+ and increases alkalinity.</li>
+<li><strong>Algal growth</strong> on <code>NH4</code> consumes H+ and increases alkalinity; algal growth on <code>NO3</code> releases H+ and decreases alkalinity.</li>
+<li><strong>Algal respiration</strong> releases <code>NH4</code>, consuming H+ and increasing alkalinity.</li>
 <li><strong>Benthic algal growth and respiration</strong> contribute the same way, scaled by the benthic coverage fraction and depth.</li>
 </ul>
-<p>NSM1 does not explicitly simulate CO2 reaeration effects on alkalinity (CO2 exchange affects DIC but is alkalinity-neutral) or mineral dissolution and precipitation.</p>
+<p>NSM1 does not explicitly simulate CO<span class="arithmatex">\(_2\)</span> reaeration effects on alkalinity (CO<span class="arithmatex">\(_2\)</span> exchange affects <code>DIC</code> but is alkalinity-neutral) or mineral dissolution and precipitation.</p>
 <h2 id="governing-equation">Governing Equation<a class="headerlink" href="#governing-equation" title="Permanent link">&para;</a></h2>
-<p>The alkalinity mass balance, implemented in <code>dAlkdt</code> at <code>processes.py</code> ~line 3413, combines the six biologically driven terms:</p>
+<p>The <code>Alk</code> mass balance, implemented in <code>dAlkdt</code> at <code>processes.py</code> ~line 3413, combines the six biologically driven terms:</p>
 <div class="arithmatex">\[
 \frac{d[Alk]}{dt} = F_{denit} - F_{nit} - F_{ApG} + F_{ApR} - F_{AbG} + F_{AbR}
 \]</div>
 <p>Each flux is expressed in mg-CaCO3 L-1 d-1. The factor 50000 (equivalent weight of CaCO3 in mg eq-1) appears in every term to convert from molar equivalents to mg-CaCO3.</p>
 <h2 id="process-equations">Process Equations<a class="headerlink" href="#process-equations" title="Permanent link">&para;</a></h2>
 <h3 id="alkalinity-change-from-nitrification">Alkalinity change from nitrification<a class="headerlink" href="#alkalinity-change-from-nitrification" title="Permanent link">&para;</a></h3>
-<p>Nitrification of 1 mole of NH4 releases 2 moles of H+, decreasing alkalinity. The routine <code>Alk_nitrification</code> at ~line 3284 computes:</p>
+<p>Nitrification of 1 mole of <code>NH4</code> releases 2 moles of H+, decreasing alkalinity. The <code>Alk_nitrification</code> routine at ~line 3284 computes:</p>
 <div class="arithmatex">\[
 F_{nit} = r_{alkn} \left(1 - e^{-KNR \cdot DOX}\right) k_{nit}(T) \cdot NH4 \cdot 50000
 \]</div>
-<p>The DOX inhibition term <span class="arithmatex">\((1 - e^{-KNR \cdot DOX})\)</span> matches the oxygen dependence of the nitrification rate in the nitrogen and DOX modules. When <code>use_DOX</code> is false, the model drops the inhibition factor.</p>
+<p>The <code>DOX</code> inhibition term <span class="arithmatex">\((1 - e^{-KNR \cdot DOX})\)</span> matches the oxygen dependence of the nitrification rate in the nitrogen and <code>DOX</code> modules. When <code>use_DOX</code> is false, NSM1 drops the inhibition factor.</p>
 <h3 id="alkalinity-change-from-denitrification">Alkalinity change from denitrification<a class="headerlink" href="#alkalinity-change-from-denitrification" title="Permanent link">&para;</a></h3>
-<p>Denitrification of NO3 to N2 consumes H+, increasing alkalinity. The routine <code>Alk_denitrification</code> at ~line 3246 computes:</p>
+<p>Denitrification of <code>NO3</code> to <code>N2</code> consumes H+, increasing alkalinity. The <code>Alk_denitrification</code> routine at ~line 3246 computes:</p>
 <div class="arithmatex">\[
 F_{denit} = r_{alkden} \left(1 - \frac{DOX}{DOX + K_{sOxdn}}\right) k_{dnit}(T) \cdot NO3 \cdot 50000
 \]</div>
-<p>The DOX inhibition term promotes denitrification only at low oxygen. When <code>use_DOX</code> is false, the oxygen term drops out.</p>
+<p>The <code>DOX</code> inhibition term promotes denitrification only at low oxygen. When <code>use_DOX</code> is false, the oxygen term drops out.</p>
 <h3 id="alkalinity-change-from-algal-growth">Alkalinity change from algal growth<a class="headerlink" href="#alkalinity-change-from-algal-growth" title="Permanent link">&para;</a></h3>
-<p>Algal growth on ammonium consumes H+ (increases alkalinity); growth on nitrate releases H+ (decreases alkalinity). The routine <code>Alk_algal_growth</code> at ~line 3322 computes the net effect weighted by the ammonium preference fraction <span class="arithmatex">\(f_{NH4}^{Ap}\)</span>:</p>
+<p>Algal growth on ammonium consumes H+ (increases alkalinity); growth on nitrate releases H+ (decreases alkalinity). The <code>Alk_algal_growth</code> routine at ~line 3322 computes the net effect weighted by the ammonium preference fraction <span class="arithmatex">\(f_{NH4}^{Ap}\)</span>:</p>
 <div class="arithmatex">\[
 F_{ApG} = \left[ r_{alkaa} \, f_{NH4}^{Ap} - r_{alkan} \, (1 - f_{NH4}^{Ap}) \right] \cdot ApGrowth \cdot r_{ca} \cdot 50000
 \]</div>
 <p>The sign convention in the governing equation subtracts <span class="arithmatex">\(F_{ApG}\)</span>, reflecting that growth on NO3 is the net alkalinity-consuming pathway when the ammonium fraction is low.</p>
 <h3 id="alkalinity-change-from-algal-respiration">Alkalinity change from algal respiration<a class="headerlink" href="#alkalinity-change-from-algal-respiration" title="Permanent link">&para;</a></h3>
-<p>Algal respiration returns NH4 to the water, which consumes H+ and increases alkalinity. The routine <code>Alk_algal_respiration</code> at ~line 3345 computes:</p>
+<p>Algal respiration returns <code>NH4</code> to the water, which consumes H+ and increases alkalinity. The <code>Alk_algal_respiration</code> routine at ~line 3345 computes:</p>
 <div class="arithmatex">\[
 F_{ApR} = ApResp \cdot r_{alkaa} \cdot r_{ca} \cdot 50000
 \]</div>
 <h3 id="alkalinity-change-from-benthic-algae">Alkalinity change from benthic algae<a class="headerlink" href="#alkalinity-change-from-benthic-algae" title="Permanent link">&para;</a></h3>
-<p>Benthic algal growth and respiration follow the same stoichiometry as floating algae, with the benthic ratios <code>r_alkba</code> and <code>r_alkbn</code>, the benthic C-to-dry-weight ratio <code>rcb</code>, and additional scaling by the benthic coverage fraction <code>Fb</code> and inverse depth <span class="arithmatex">\(1/h\)</span>. The routines <code>Alk_benthic_algae_growth</code> (~line 3364) and <code>Alk_benthic_algae_respiration</code> (~line 3391) compute:</p>
+<p>Benthic algal growth and respiration follow the same stoichiometry as floating algae, with the benthic ratios <code>r_alkba</code> and <code>r_alkbn</code>, the benthic C-to-dry-weight ratio <code>rcb</code>, and additional scaling by the benthic coverage fraction <code>Fb</code> and inverse depth <span class="arithmatex">\(1/h\)</span>. The <code>Alk_benthic_algae_growth</code> (~line 3364) and <code>Alk_benthic_algae_respiration</code> (~line 3391) routines compute:</p>
 <div class="arithmatex">\[
 F_{AbG} = \frac{F_b}{h} \left[ r_{alkba} \, f_{NH4}^{Ab} - r_{alkbn} \, (1 - f_{NH4}^{Ab}) \right] \cdot AbGrowth \cdot r_{cb} \cdot 50000
 \]</div>
@@ -3272,7 +3272,7 @@ F_{AbR} = \frac{F_b}{h} \cdot r_{alkba} \cdot AbResp \cdot r_{cb} \cdot 50000
 <p>Alkalinity is a passive tracer in NSM1: it is affected by other state variables but does not feed back into them. Its couplings are:</p>
 <ul>
 <li><strong>Ammonia (<code>NH4</code>)</strong> drives nitrification loss of alkalinity and, through algal uptake, controls the sign of the algal growth term.</li>
-<li><strong>Nitrate (<code>NO3</code>)</strong> drives denitrification gain of alkalinity and contributes to the algal growth term when algae use NO3.</li>
+<li><strong>Nitrate (<code>NO3</code>)</strong> drives denitrification gain of alkalinity and contributes to the algal growth term when algae use <code>NO3</code>.</li>
 <li><strong>Floating algae (<code>Ap</code>)</strong> drives <span class="arithmatex">\(F_{ApG}\)</span> and <span class="arithmatex">\(F_{ApR}\)</span>.</li>
 <li><strong>Benthic algae (<code>Ab</code>)</strong> drives <span class="arithmatex">\(F_{AbG}\)</span> and <span class="arithmatex">\(F_{AbR}\)</span>.</li>
 <li><strong>Dissolved oxygen (<code>DOX</code>)</strong> modulates the nitrification and denitrification rates through their oxygen dependence.</li>

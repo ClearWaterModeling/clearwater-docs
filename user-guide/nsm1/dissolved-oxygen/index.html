@@ -3203,10 +3203,10 @@
 
 
 <h1 id="dissolved-oxygen-dox">Dissolved Oxygen (DOX)<a class="headerlink" href="#dissolved-oxygen-dox" title="Permanent link">&para;</a></h1>
-<p>Dissolved oxygen is the single most important water quality indicator in surface waters. DOX concentration reflects the net outcome of every biological, chemical, and physical process occurring in the water column and at the sediment-water interface. Phytoplankton and benthic algae add oxygen during photosynthesis and remove it during respiration. Nitrification, organic carbon oxidation, and carbonaceous biochemical oxygen demand (CBOD) each consume oxygen as microbial populations metabolize reduced species. Sediment oxygen demand (SOD) depletes oxygen at the bed. Atmospheric reaeration continuously drives the water-column concentration toward saturation.</p>
-<p>The classical dissolved oxygen sag curve in rivers below a waste load illustrates this balance: oxygen declines as oxidation reactions consume DOX faster than reaeration can replenish it, reaches a minimum where reaeration and demand match, and recovers downstream as demands decay. NSM1 resolves this balance explicitly by tracking nine rate terms that collectively determine the DOX budget.</p>
+<p>Dissolved oxygen (DOX) is the single most important water quality indicator in surface waters. The <code>DOX</code> concentration reflects the net outcome of every biological, chemical, and physical process occurring in the water column and at the sediment-water interface. Phytoplankton and benthic algae add oxygen during photosynthesis and remove it during respiration. Nitrification, organic carbon oxidation, and Carbonaceous Biochemical Oxygen Demand (CBOD) each consume oxygen as microbial populations metabolize reduced species. Sediment Oxygen Demand (SOD) depletes oxygen at the bed. Atmospheric reaeration continuously drives the water-column concentration toward saturation.</p>
+<p>NSM1 resolves this balance explicitly by tracking nine rate terms that collectively determine the <code>DOX</code> budget.</p>
 <h2 id="role-in-water-quality">Role in Water Quality<a class="headerlink" href="#role-in-water-quality" title="Permanent link">&para;</a></h2>
-<p>NSM1 treats DOX as the integrator of all oxygen-producing and oxygen-consuming processes in the water column. The model computes atmospheric reaeration from a user-selectable combination of hydraulic and wind-driven gas transfer formulations. The model computes biotic sources and sinks from the algal, benthic algal, nitrogen, carbon, and CBOD modules, so DOX is tightly coupled to every other NSM1 state variable. Low DOX inhibits nitrification, promotes denitrification, and triggers sediment nutrient release, so DOX also controls the behavior of the nitrogen cycle.</p>
+<p>NSM1 treats <code>DOX</code> as the integrator of all oxygen-producing and oxygen-consuming processes in the water column. NSM1 computes atmospheric reaeration from a user-selectable combination of hydraulic and wind-driven gas transfer formulations. NSM1 computes biotic sources and sinks from the algal, benthic algal, nitrogen, carbon, and CBOD modules, so <code>DOX</code> is tightly coupled to every other NSM1 state variable. Low <code>DOX</code> inhibits nitrification, promotes denitrification, and triggers sediment nutrient release, so <code>DOX</code> also controls the behavior of the nitrogen cycle.</p>
 <pre class="mermaid"><code>flowchart LR
     Atm[Atmosphere] &lt;--&gt;|reaeration| DOX[DOX]
     Ap[Floating algae] --&gt;|photosynthesis| DOX
@@ -3218,7 +3218,7 @@
     DOX --&gt;|DOC oxidation| DOC
     DOX --&gt;|SOD| Sed[Sediment]</code></pre>
 <h2 id="governing-equation">Governing Equation<a class="headerlink" href="#governing-equation" title="Permanent link">&para;</a></h2>
-<p>The DOX mass balance, implemented in <code>dDOXdt</code> at <code>processes.py</code> ~line 3095, sums nine rate terms:</p>
+<p>The <code>DOX</code> mass balance, implemented in <code>dDOXdt</code> at <code>processes.py</code> ~line 3095, sums nine rate terms:</p>
 <div class="arithmatex">\[
 \frac{d[DOX]}{dt} = F_{rea} + F_{ApG} - F_{ApR} - F_{nit} - F_{DOCox} - F_{CBODox} + F_{AbG} - F_{AbR} - F_{SOD}
 \]</div>
@@ -3292,7 +3292,7 @@ k_a(T) = \frac{k_{aw}(T)}{h} + k_{ah}(T)
 <p>Here <span class="arithmatex">\(k_{ah}\)</span> is a first-order hydraulic reaeration rate (1/d), <span class="arithmatex">\(k_{aw}\)</span> is a wind-driven gas transfer velocity (m/d), and <span class="arithmatex">\(h\)</span> is water depth.</p>
 <p>NSM1 offers nine hydraulic reaeration formulas selected by <code>hydraulic_reaeration_option</code> and thirteen wind reaeration formulas selected by <code>wind_reaeration_option</code>. Option 1 in each case uses the user-supplied values <code>kah_20_user</code> and <code>kaw_20_user</code> directly. The other options implement published correlations of O'Connor-Dobbins, Churchill, Owens-Gibbs, Tsivoglou, Thackston-Krenkel, Banks-Herrera, Wanninkhof, and others as functions of velocity, depth, flow, slope, shear velocity, and wind speed at 10 m. The subroutines <code>kah_20</code> and <code>kaw_20</code> at <code>processes.py</code> ~lines 50 and 125 enumerate the full set. Both components are corrected to ambient temperature with Arrhenius coefficients <code>kah_theta</code> and <code>kaw_theta</code> (default 1.024).</p>
 <h3 id="floating-algae-photosynthesis-and-respiration">Floating algae photosynthesis and respiration<a class="headerlink" href="#floating-algae-photosynthesis-and-respiration" title="Permanent link">&para;</a></h3>
-<p>Photosynthesis by floating algae releases oxygen in proportion to the carbon fixed, with a stoichiometric bonus when ammonium rather than nitrate supplies cell nitrogen. The model computes:</p>
+<p>Photosynthesis by floating algae releases oxygen in proportion to the carbon fixed, with a stoichiometric bonus when ammonium rather than nitrate supplies cell nitrogen. NSM1 computes:</p>
 <div class="arithmatex">\[
 F_{ApG} = ApGrowth \cdot r_{ca} \cdot r_{oc} \cdot \left( \frac{138}{106} - \frac{32}{106} f_{NH4} \right)
 \]</div>
@@ -3309,12 +3309,12 @@ F_{AbG} = \left( \frac{138}{106} - \frac{32}{106} f^b_{NH4} \right) r_{oc} \, r_
 F_{AbR} = r_{oc} \, r_{cb} \, AbResp \, \frac{F_b}{h}
 \]</div>
 <h3 id="nitrification-oxygen-demand">Nitrification oxygen demand<a class="headerlink" href="#nitrification-oxygen-demand" title="Permanent link">&para;</a></h3>
-<p>Nitrification oxidizes NH4 to NO3 and consumes oxygen at the stoichiometric ratio <code>ron</code> (2 times 32/14 = 4.57 mg-O2 per mg-N). The model suppresses the rate at low oxygen using an exponential inhibition factor controlled by <code>KNR</code>:</p>
+<p>Nitrification oxidizes <code>NH4</code> to <code>NO3</code> and consumes oxygen at the stoichiometric ratio <code>ron</code> (2 times 32/14 = 4.57 mg-O2 per mg-N). NSM1 suppresses the rate at low oxygen using an exponential inhibition factor controlled by <code>KNR</code>:</p>
 <div class="arithmatex">\[
 F_{nit} = \left( 1 - e^{-KNR \cdot DOX} \right) r_{on} \, k_{nit}(T) \, NH4
 \]</div>
 <h3 id="cbod-oxidation">CBOD oxidation<a class="headerlink" href="#cbod-oxidation" title="Permanent link">&para;</a></h3>
-<p>CBOD oxidation already carries units of oxygen demand, so the DOX flux is simply the CBOD oxidation rate summed across all CBOD groups:</p>
+<p>CBOD oxidation already carries units of oxygen demand, so the <code>DOX</code> flux is simply the <code>CBOD</code> oxidation rate summed across all CBOD groups:</p>
 <div class="arithmatex">\[
 F_{CBODox} = \sum_i CBOD_{ox,i}
 \]</div>
@@ -3324,17 +3324,17 @@ F_{CBODox} = \sum_i CBOD_{ox,i}
 F_{DOCox} = r_{oc} \cdot DOC\_DIC\_oxidation
 \]</div>
 <h3 id="sediment-oxygen-demand">Sediment oxygen demand<a class="headerlink" href="#sediment-oxygen-demand" title="Permanent link">&para;</a></h3>
-<p>SOD acts as an areal sink on the overlying water column. The model corrects the 20 deg C rate for temperature with an Arrhenius factor and for low oxygen with a Monod half-saturation:</p>
+<p>SOD acts as an areal sink on the overlying water column. NSM1 corrects the 20 deg C rate for temperature with an Arrhenius factor and for low oxygen with a Monod half-saturation:</p>
 <div class="arithmatex">\[
 F_{SOD} = \frac{1}{h} \cdot SOD_{20} \, \theta_{SOD}^{T-20} \cdot \frac{DOX}{DOX + K_{sSOD}}
 \]</div>
 <p>The subroutine <code>SOD_tc</code> at <code>processes.py</code> ~line 216 implements this correction.</p>
 <h2 id="dissolved-oxygen-saturation">Dissolved Oxygen Saturation<a class="headerlink" href="#dissolved-oxygen-saturation" title="Permanent link">&para;</a></h2>
-<p>NSM1 computes DOX saturation from water temperature and atmospheric pressure using the APHA / Benson and Krause formulation. The uncorrected saturation concentration in fresh water at 1 atm is:</p>
+<p>NSM1 computes <code>DOX</code> saturation from water temperature and atmospheric pressure using the APHA / Benson and Krause formulation. The uncorrected saturation concentration in fresh water at 1 atm is:</p>
 <div class="arithmatex">\[
 \ln DOX_{sat}^0 = -139.34410 + \frac{1.5757 \times 10^5}{T_K} - \frac{6.6423 \times 10^7}{T_K^2} + \frac{1.2438 \times 10^{10}}{T_K^3} - \frac{8.6219 \times 10^{11}}{T_K^4}
 \]</div>
-<p>The model corrects this baseline for ambient pressure and water vapor:</p>
+<p>NSM1 corrects this baseline for ambient pressure and water vapor:</p>
 <div class="arithmatex">\[
 DOX_{sat} = DOX_{sat}^0 \cdot p_{atm} \cdot \frac{(1 - p_{wv}/p_{atm})(1 - \alpha \, p_{atm})}{(1 - p_{wv})(1 - \alpha)}
 \]</div>
@@ -3435,20 +3435,20 @@ DOX_{sat} = DOX_{sat}^0 \cdot p_{atm} \cdot \frac{(1 - p_{wv}/p_{atm})(1 - \alph
 <p>Several DOX-related parameters in <code>DEFAULT_GLOBALVARS</code> use the placeholder sentinel value <code>999</code>, including <code>SOD_20</code>, <code>SOD_theta</code>, <code>vsop</code>, <code>vs</code>, <code>kaw_20_user</code>, and <code>kah_20_user</code>. These sentinels signal that users must supply site-specific values in the model configuration. Running NSM1 with the defaults as shipped will produce nonphysical results. In particular, <code>SOD_theta = 999</code> combined with the Arrhenius correction <span class="arithmatex">\(\theta^{T-20}\)</span> causes catastrophic exponential blow-up above 20 deg C: at 21 deg C the correction factor is 999, at 22 deg C it is ~10^6, and at 25 deg C it exceeds 10^15. The default <code>pressure_mb = 2026.5</code> is also not a physical sea-level pressure. Input validation at model initialization, planned for v2, will reject or warn on sentinel values. Until then, always override these parameters in your configuration.</p>
 </div>
 <h2 id="couplings-with-other-state-variables">Couplings with Other State Variables<a class="headerlink" href="#couplings-with-other-state-variables" title="Permanent link">&para;</a></h2>
-<p>DOX is coupled to nearly every other NSM1 state variable:</p>
+<p><code>DOX</code> is coupled to nearly every other NSM1 state variable:</p>
 <ul>
-<li><strong>Floating algae (<code>Ap</code>)</strong>: photosynthesis produces DOX, respiration consumes DOX.</li>
-<li><strong>Benthic algae (<code>Ab</code>)</strong>: photosynthesis and respiration exchange DOX across the bed, scaled by <code>Fb/h</code>.</li>
-<li><strong>Ammonia (<code>NH4</code>)</strong>: nitrification consumes DOX in proportion to <code>ron</code>; the nitrification rate itself is DOX-limited via <code>KNR</code>.</li>
-<li><strong>Nitrate (<code>NO3</code>)</strong>: low DOX promotes denitrification, which does not directly consume water-column DOX but shifts the nitrogen balance.</li>
-<li><strong>Dissolved organic carbon (<code>DOC</code>)</strong>: heterotrophic oxidation consumes DOX at the ratio <code>roc</code>.</li>
-<li><strong>CBOD</strong>: first-order oxidation consumes DOX directly.</li>
-<li><strong>Alkalinity (<code>Alk</code>)</strong>: nitrification and denitrification rates (which depend on DOX) drive alkalinity changes.</li>
-<li><strong>Sediment</strong>: SOD draws DOX from the overlying water column, attenuated at low oxygen by <code>KsSOD</code>.</li>
-<li><strong>Atmosphere</strong>: reaeration exchanges DOX across the air-water interface whenever DOX differs from saturation.</li>
+<li><strong>Floating algae (<code>Ap</code>)</strong>: photosynthesis produces <code>DOX</code>, respiration consumes <code>DOX</code>.</li>
+<li><strong>Benthic algae (<code>Ab</code>)</strong>: photosynthesis and respiration exchange <code>DOX</code> across the bed, scaled by <code>Fb/h</code>.</li>
+<li><strong>Ammonia (<code>NH4</code>)</strong>: nitrification consumes <code>DOX</code> in proportion to <code>ron</code>; the nitrification rate itself is <code>DOX</code>-limited via <code>KNR</code>.</li>
+<li><strong>Nitrate (<code>NO3</code>)</strong>: low <code>DOX</code> promotes denitrification, which does not directly consume water-column <code>DOX</code> but shifts the nitrogen balance.</li>
+<li><strong>Dissolved organic carbon (<code>DOC</code>)</strong>: heterotrophic oxidation consumes <code>DOX</code> at the ratio <code>roc</code>.</li>
+<li><strong>CBOD</strong>: first-order oxidation consumes <code>DOX</code> directly.</li>
+<li><strong>Alkalinity (<code>Alk</code>)</strong>: nitrification and denitrification rates (which depend on <code>DOX</code>) drive alkalinity changes.</li>
+<li><strong>Sediment</strong>: SOD draws <code>DOX</code> from the overlying water column, attenuated at low oxygen by <code>KsSOD</code>.</li>
+<li><strong>Atmosphere</strong>: reaeration exchanges <code>DOX</code> across the air-water interface whenever <code>DOX</code> differs from saturation.</li>
 </ul>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
-<p>Because DOX depends on many upstream variables and options, a typical configuration must supply reaeration, SOD, and saturation inputs consistently. The following YAML template illustrates the required entries. The v2 port of DOX is pending, so this template reflects v1 usage.</p>
+<p>Because <code>DOX</code> depends on many upstream variables and options, a typical configuration must supply reaeration, SOD, and saturation inputs consistently. The following YAML template illustrates the required entries. The v2 port of <code>DOX</code> is pending, so this template reflects v1 usage.</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">global_parameters</span><span class="p">:</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">use_DOX</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
@@ -3474,13 +3474,13 @@ DOX_{sat} = DOX_{sat}^0 \cdot p_{atm} \cdot \frac{(1 - p_{wv}/p_{atm})(1 - \alph
 <h2 id="implementation-notes">Implementation Notes<a class="headerlink" href="#implementation-notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>NSM1 source: <code>src/clearwater_modules/nsm1/processes.py</code>, function <code>dDOXdt</code> at ~line 3095. The function sums nine rate terms computed in the adjacent helpers (<code>Atm_O2_reaeration</code>, <code>DOX_ApGrowth</code>, <code>DOX_ApRespiration</code>, <code>DOX_Nitrification</code>, <code>DOX_DOC_oxidation</code>, <code>DOX_CBOD_oxidation</code>, <code>DOX_AbGrowth</code>, <code>DOX_AbRespiration</code>, <code>DOX_SOD</code>). Supporting routines <code>DOX_sat</code>, <code>pwv</code>, <code>DOs_atm_alpha</code>, <code>ka_tc</code>, <code>kah_20</code>, <code>kah_tc</code>, <code>kaw_20</code>, <code>kaw_tc</code>, and <code>SOD_tc</code> are defined earlier in the same file.</li>
-<li>v2 implementation: the DOX process is not yet available in the v2 process-based architecture. See the developer guide's "Adding a Process" page for the structural pattern new processes follow.</li>
+<li>v2 implementation: the <code>DOX</code> process is not yet available in the v2 process-based architecture. See the developer guide's "Adding a Process" page for the structural pattern new processes follow.</li>
 <li>Default constants: <code>DEFAULT_DOX</code> in <code>src/clearwater_modules/nsm1/constants.py</code> defines <code>ron</code> and <code>KsSOD</code>. Reaeration, SOD, and pressure parameters live in <code>DEFAULT_GLOBALVARS</code> and include the sentinel values discussed above.</li>
 <li>Known issue: see <code>docs/NSM1_DOX_rate_bug_investigation.md</code> in the ClearWater-modules repository for the analysis of the <code>SOD_theta = 999</code> blow-up and the recommended fix (input validation at model init rather than replacing sentinels with typical values).</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Stoichiometric consistency</p>
-<p>The <code>DOX_ApGrowth</code> implementation uses the stoichiometric expression <code>(138/106 - 32 * ApUptakeFr_NH4 / 106)</code>, consistent with the Redfield-based derivation in Zhang and Johnson (2016). Verify that the algal and benthic algal C:Chl ratios (<code>rca</code>, <code>rcb</code>) and ammonium uptake preferences (<code>ApUptakeFr_NH4</code>, <code>AbUptakeFr_NH4</code>) are consistent between DOX, nitrogen, carbon, and alkalinity configurations.</p>
+<p>The <code>DOX_ApGrowth</code> implementation uses the stoichiometric expression <code>(138/106 - 32 * ApUptakeFr_NH4 / 106)</code>, consistent with the Redfield-based derivation in Zhang and Johnson (2016). Verify that the algal and benthic algal C:Chl ratios (<code>rca</code>, <code>rcb</code>) and ammonium uptake preferences (<code>ApUptakeFr_NH4</code>, <code>AbUptakeFr_NH4</code>) are consistent between <code>DOX</code>, nitrogen, carbon, and alkalinity configurations.</p>
 </div>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>

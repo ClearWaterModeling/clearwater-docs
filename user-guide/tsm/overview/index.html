@@ -3007,7 +3007,7 @@
 </ul>
 <p>The module computes each flux term explicitly from meteorological forcing data (air temperature, wind speed, relative humidity or dew point, cloud cover, solar radiation, and atmospheric pressure) together with the current water temperature and bed temperature. TSM then sums the fluxes, divides by the heat capacity of the water column, and integrates forward in time.</p>
 <h2 id="coupling-to-transport-models">Coupling to Transport Models<a class="headerlink" href="#coupling-to-transport-models" title="Permanent link">&para;</a></h2>
-<p>TSM operates as a cell-local kinetic solver. It does not compute advection or dispersion. Instead, an external transport model (for example, HEC-RAS 2D through the ClearWater-Riverine coupler) supplies the cell geometry, water volume, and transport fluxes each time step. TSM receives the current temperature field, applies the energy balance to produce a temperature change, and returns updated temperatures to the transport model. This separation of concerns allows TSM to run on any grid that the host hydrodynamic model supports, including unstructured 2D meshes.</p>
+<p>TSM operates as a cell-local kinetic solver. TSM does not compute advection or dispersion. Instead, an external transport model (for example, HEC-RAS 2D through the ClearWater-Riverine coupler) supplies the cell geometry, water volume, and transport fluxes each time step. TSM receives the current temperature field, applies the energy balance to produce a temperature change, and returns updated temperatures to the transport model. This separation of concerns allows TSM to run on any grid that the host hydrodynamic model supports, including unstructured 2D meshes.</p>
 <p>Each cell is computed independently. TSM is vectorized over <code>xarray</code> inputs, so the full spatial grid can be evaluated in a single array operation at each time step.</p>
 <h2 id="inputs-at-a-glance">Inputs at a Glance<a class="headerlink" href="#inputs-at-a-glance" title="Permanent link">&para;</a></h2>
 <p>TSM requires three categories of inputs:</p>
@@ -3033,11 +3033,11 @@
 </tr>
 </tbody>
 </table>
-<p>Meteorological data may be supplied as time series at a single station, as spatially distributed fields, or as per-cell values.</p>
+<p>You may supply meteorological data as time series at a single station, as spatially distributed fields, or as per-cell values.</p>
 <h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
 <p>TSM produces the updated water temperature field at each time step. Individual heat flux components (shortwave, longwave, latent, sensible, sediment) are also available as diagnostic outputs for energy budget analysis and model calibration.</p>
 <h2 id="when-to-use-tsm">When to Use TSM<a class="headerlink" href="#when-to-use-tsm" title="Permanent link">&para;</a></h2>
-<p>Use TSM when water temperature is a state variable of interest, when downstream water quality calculations require a simulated temperature field, or when meteorological forcing varies substantially in space or time across the model domain. If measured temperature time series are available at every cell, temperature can instead be imposed directly as a boundary condition, and TSM can be omitted.</p>
+<p>Use TSM when water temperature is a state variable of interest, when downstream water quality calculations require a simulated temperature field, or when meteorological forcing varies substantially in space or time across the model domain. If measured temperature time series are available at every cell, you can impose temperature directly as a boundary condition and omit TSM.</p>
 <h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Review the <a href="../energy-balance/">Energy Balance</a> page for the governing equations and flux formulations.</li>

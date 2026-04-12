@@ -2993,7 +2993,7 @@
 
 
 <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
-<p>ClearWater-Riverine is a modern, Python-based water quality transport framework developed by the U.S. Army Engineer Research and Development Center (ERDC), Environmental Laboratory (EL). The framework solves the two-dimensional, depth-averaged advection-diffusion equation on the unstructured mesh produced by an HEC-RAS 2D hydrodynamic run. ClearWater-Riverine consumes the HEC-RAS flow field rather than solving for flow itself, which lets modelers reuse calibrated HEC-RAS projects for water quality analysis without duplicating the hydrodynamic effort.</p>
+<p>ClearWater-Riverine is a modern, Python-based water quality transport framework developed by the U.S. Army Engineer Research and Development Center (ERDC), Environmental Laboratory (EL). The framework solves the two-dimensional (2D), depth-averaged advection-diffusion equation on the unstructured mesh produced by an HEC-RAS (Hydrologic Engineering Center's River Analysis System) 2D hydrodynamic run. ClearWater-Riverine consumes the HEC-RAS flow field rather than solving for flow itself, which lets modelers reuse calibrated HEC-RAS projects for water quality analysis without duplicating the hydrodynamic effort.</p>
 <h2 id="what-clearwater-riverine-does">What ClearWater-Riverine Does<a class="headerlink" href="#what-clearwater-riverine-does" title="Permanent link">&para;</a></h2>
 <p>ClearWater-Riverine computes the transport of one or more scalar constituents through a river, floodplain, estuary, or shallow lake represented by an HEC-RAS 2D mesh. For each constituent, the framework:</p>
 <ul>
@@ -3005,7 +3005,7 @@
 </ul>
 <p>The framework handles multiple constituents simultaneously by sharing a single hydrodynamic mesh and a single left-hand side matrix per timestep. Each constituent carries its own initial conditions, boundary conditions, and right-hand side vector.</p>
 <h2 id="relationship-to-hec-ras">Relationship to HEC-RAS<a class="headerlink" href="#relationship-to-hec-ras" title="Permanent link">&para;</a></h2>
-<p>ClearWater-Riverine reads an HEC-RAS 2D plan HDF5 file (typically named <code>*.pNN.hdf</code>) and extracts:</p>
+<p>ClearWater-Riverine reads an HEC-RAS 2D plan Hierarchical Data Format version 5 (HDF5) file (typically named <code>*.pNN.hdf</code>) and extracts:</p>
 <ul>
 <li>2D Flow Area geometry, including node coordinates, cell centers, face-node connectivity, and cell-edge connectivity.</li>
 <li>Time-varying face flows and face velocities.</li>
@@ -3014,7 +3014,7 @@
 </ul>
 <p>The HEC-RAS hydrodynamic solution is the source of truth for flow. ClearWater-Riverine does not modify flow, depth, or volume; the framework consumes these values as inputs to the transport equation. As a result, the temporal resolution and spatial resolution of transport are dictated by the HEC-RAS output.</p>
 <h2 id="mesh-concepts">Mesh Concepts<a class="headerlink" href="#mesh-concepts" title="Permanent link">&para;</a></h2>
-<p>The computational mesh follows the UGRID conventions for unstructured grids and is represented as an <code>xarray.Dataset</code>. The principal dimensions and variables include:</p>
+<p>The computational mesh follows the Unstructured Grid (UGRID) conventions for unstructured grids and is represented as an <code>xarray.Dataset</code>. The principal dimensions and variables include:</p>
 <ul>
 <li><code>nface</code> -- the cell (face) dimension; each entry corresponds to one 2D cell.</li>
 <li><code>nedge</code> -- the edge dimension; each entry corresponds to one face between two cells or between a cell and a boundary.</li>

@@ -3083,7 +3083,7 @@
 
 
 <h1 id="post-processing">Post-Processing<a class="headerlink" href="#post-processing" title="Permanent link">&para;</a></h1>
-<p>ClearWater-Riverine provides post-processing utilities for mass balance accounting, edge-wise mass flux recovery, and derived geometric quantities. These utilities operate on the mesh produced by a completed simulation or on a mesh loaded from a saved Zarr dataset. The utilities are implemented in <code>src/clearwater_riverine/postproc_util.py</code>.</p>
+<p>ClearWater-Riverine provides post-processing utilities for mass balance accounting, edge-wise mass flux recovery, and derived geometric quantities. These utilities operate on the mesh produced by a completed simulation or on a mesh loaded from a saved Zarr dataset. The mesh is produced by an HEC-RAS (Hydrologic Engineering Center's River Analysis System) 2D hydrodynamic run. The utilities are implemented in <code>src/clearwater_riverine/postproc_util.py</code>.</p>
 <h2 id="mass-flux-recovery">Mass Flux Recovery<a class="headerlink" href="#mass-flux-recovery" title="Permanent link">&para;</a></h2>
 <p>Every call to <code>ClearwaterRiverine.update</code> records advective, diffusive, and total mass flux across every edge in the mesh. The fluxes are stored in three arrays on each <code>Constituent</code>:</p>
 <table>

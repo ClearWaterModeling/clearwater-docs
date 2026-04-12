@@ -2765,6 +2765,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#in-this-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In This Section
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-components-fit-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the Components Fit Together
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Sections
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2784,8 +2825,25 @@
 
 
 <h1 id="user-guide">User Guide<a class="headerlink" href="#user-guide" title="Permanent link">&para;</a></h1>
-<p><em>This page is under development.</em></p>
-<p>This section provides detailed documentation for each ClearWater component: ClearWater-Riverine (hydrodynamics), TSM (temperature), GSM (general constituent transport), NSM1 (nutrient simulation), and ClearWater-Data (data management).</p>
+<p>The User Guide documents each component of the ClearWater water quality modeling framework. It covers the transport engine, the water quality kinetics modules, and the shared data layer, along with the configuration, inputs, and parameters that users provide to run a simulation.</p>
+<h2 id="in-this-section">In This Section<a class="headerlink" href="#in-this-section" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="riverine/">ClearWater-Riverine</a> -- the two-dimensional, depth-averaged transport framework that reads HEC-RAS (Hydrologic Engineering Center's River Analysis System) 2D hydrodynamic output and solves the advection-diffusion equation for one or more constituents.</li>
+<li><a href="tsm/">Temperature Simulation Module (TSM)</a> -- computes water temperature through a surface energy balance, with heat exchange terms for solar radiation, longwave radiation, sensible and latent heat, and sediment-water heat flux.</li>
+<li><a href="gsm/">General Constituents Simulation Module (GSM)</a> -- simulates arbitrary constituents that follow first-order decay and optional settling, suitable for tracers, total dissolved solids, and user-defined substances that do not require specialized kinetics.</li>
+<li><a href="nsm1/">Nutrient Simulation Module v1 (NSM1)</a> -- simulates the coupled cycling of nitrogen, phosphorus, carbon, dissolved oxygen, algae, pathogens, alkalinity, particulate organic matter, and carbonaceous biochemical oxygen demand (CBOD).</li>
+<li><a href="data/">ClearWater-Data</a> -- the shared data-access layer used by the transport engine and the kinetics modules, built on <code>xarray</code> with support for both in-memory and chunked <code>zarr</code> workflows.</li>
+</ul>
+<h2 id="how-the-components-fit-together">How the Components Fit Together<a class="headerlink" href="#how-the-components-fit-together" title="Permanent link">&para;</a></h2>
+<p>ClearWater-Riverine drives constituent transport across the mesh. At each time step, the transport engine calls into one or more kinetics modules (TSM, GSM, NSM1) to compute source and sink terms, which are then applied to the advected state variables. ClearWater-Data provides the <code>VariableRegistry</code> that all components share for state variable storage, lookup, and time indexing.</p>
+<p>A typical coupled simulation combines ClearWater-Riverine with TSM (to compute temperature) and NSM1 (to compute nutrient and algal kinetics driven by that temperature). The <a href="../getting-started/">Getting Started</a> section walks through a minimal coupled run, and the <a href="../examples/">Examples</a> section provides end-to-end Jupyter notebooks for the Ohio River and other reference cases.</p>
+<h2 id="related-sections">Related Sections<a class="headerlink" href="#related-sections" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../getting-started/">Getting Started</a> -- installation, environment setup, and a minimal coupled simulation.</li>
+<li><a href="../theory/">Theory</a> -- the mathematical and physical formulations that underlie transport, heat exchange, and kinetic reactions.</li>
+<li><a href="../api/">API Reference</a> -- auto-generated reference documentation for the Python classes and functions.</li>
+<li><a href="../developer/">Developer Guide</a> -- architecture, contribution guidelines, and the Process-based interface for adding a new kinetics module.</li>
+</ul>
 
 
 

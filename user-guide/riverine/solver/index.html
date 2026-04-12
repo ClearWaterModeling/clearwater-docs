@@ -3093,7 +3093,7 @@
 
 
 <h1 id="transport-solver">Transport Solver<a class="headerlink" href="#transport-solver" title="Permanent link">&para;</a></h1>
-<p>ClearWater-Riverine solves the two-dimensional, depth-averaged advection-diffusion equation on the HEC-RAS 2D unstructured mesh using an implicit finite volume scheme. This page describes the governing equation, the spatial and temporal discretization, the sparse linear solve, and the per-timestep update procedure. The solver is implemented in <code>src/clearwater_riverine/transport.py</code> and <code>src/clearwater_riverine/linalg.py</code>.</p>
+<p>ClearWater-Riverine solves the two-dimensional (2D), depth-averaged advection-diffusion equation on the HEC-RAS (Hydrologic Engineering Center's River Analysis System) 2D unstructured mesh using an implicit finite volume scheme. This page describes the governing equation, the spatial and temporal discretization, the sparse linear solve, and the per-timestep update procedure. The solver is implemented in <code>src/clearwater_riverine/transport.py</code> and <code>src/clearwater_riverine/linalg.py</code>.</p>
 <h2 id="governing-equation">Governing Equation<a class="headerlink" href="#governing-equation" title="Permanent link">&para;</a></h2>
 <p>For a scalar constituent with concentration <code>C</code>, cell volume <code>V</code>, face flow <code>Q</code>, and diffusion coefficient <code>D</code>, the depth-averaged transport equation integrated over one cell is:</p>
 <div class="arithmatex">\[

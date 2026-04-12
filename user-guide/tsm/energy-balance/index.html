@@ -3094,7 +3094,7 @@
 <div class="arithmatex">\[
 q_{sw} = (1 - \alpha_s) \, q_{sw,\text{inc}}
 \]</div>
-<p>where <span class="arithmatex">\(q_{sw,\text{inc}}\)</span> is the incident solar radiation at the surface (W m<span class="arithmatex">\(^{-2}\)</span>) and <span class="arithmatex">\(\alpha_s\)</span> is the surface albedo. TSM accepts incident shortwave radiation directly as a meteorological input, so atmospheric attenuation, time-of-day effects, and cloud attenuation are resolved in the forcing data rather than internally.</p>
+<p>where <span class="arithmatex">\(q_{sw,\text{inc}}\)</span> is the incident solar radiation at the surface (W m<span class="arithmatex">\(^{-2}\)</span>) and <span class="arithmatex">\(\alpha_s\)</span> is the surface albedo. TSM accepts incident shortwave radiation directly as a meteorological input, so the forcing data resolves atmospheric attenuation, time-of-day effects, and cloud attenuation rather than TSM computing them internally.</p>
 <h3 id="longwave-atmospheric-radiation">Longwave Atmospheric Radiation<a class="headerlink" href="#longwave-atmospheric-radiation" title="Permanent link">&para;</a></h3>
 <p>The downward longwave flux from the atmosphere follows a Stefan-Boltzmann formulation with an emissivity that depends on air temperature, vapor pressure, and cloud cover:</p>
 <div class="arithmatex">\[
@@ -3128,11 +3128,11 @@ q_{sen} = C_B \, f(U_w) \, \left( T_w - T_a \right)
 <div class="arithmatex">\[
 q_{sed} = \frac{k_{sed}}{\Delta z_{sed}} \, (T_{sed} - T_w)
 \]</div>
-<p>where <span class="arithmatex">\(k_{sed}\)</span> is the sediment thermal conductivity (W m<span class="arithmatex">\(^{-1}\)</span> K<span class="arithmatex">\(^{-1}\)</span>), <span class="arithmatex">\(\Delta z_{sed}\)</span> is the characteristic sediment layer depth (m), and <span class="arithmatex">\(T_{sed}\)</span> is the sediment temperature. The sediment temperature is either held constant or integrated forward with its own energy balance.</p>
+<p>where <span class="arithmatex">\(k_{sed}\)</span> is the sediment thermal conductivity (W m<span class="arithmatex">\(^{-1}\)</span> K<span class="arithmatex">\(^{-1}\)</span>), <span class="arithmatex">\(\Delta z_{sed}\)</span> is the characteristic sediment layer depth (m), and <span class="arithmatex">\(T_{sed}\)</span> is the sediment temperature. TSM either holds the sediment temperature constant or integrates it forward with its own energy balance.</p>
 <h2 id="sign-convention">Sign Convention<a class="headerlink" href="#sign-convention" title="Permanent link">&para;</a></h2>
 <p>All fluxes in the governing equation use the convention that positive values transfer energy from the surrounding environment into the water column. The outgoing longwave, latent, and sensible fluxes appear with negative signs because they remove heat from the water when <span class="arithmatex">\(T_w &gt; T_a\)</span> and the air is unsaturated.</p>
 <h2 id="time-integration">Time Integration<a class="headerlink" href="#time-integration" title="Permanent link">&para;</a></h2>
-<p>TSM integrates the governing equation using explicit Euler time stepping. The water volume and surface area are held constant over a time step and are refreshed from the transport model at the start of each step. Temperature updates are clipped to physically plausible bounds to guard against instability in the rare event of a very short or very long time step.</p>
+<p>TSM integrates the governing equation using explicit Euler time stepping. TSM holds the water volume and surface area constant over a time step and refreshes them from the transport model at the start of each step. TSM clips temperature updates to physically plausible bounds to guard against instability in the rare event of a very short or very long time step.</p>
 <p>See the <a href="../../../theory/numerical-methods/">Numerical Methods</a> page for the general integration scheme used across all ClearWater modules.</p>
 
 

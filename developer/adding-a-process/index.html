@@ -3031,7 +3031,7 @@
 <li>Add the new class to the <code>RUN_ORDER</code> list in <code>src/clearwater_modules_v2/processes/__init__.py</code>.</li>
 <li>Add a v1-parity test under <code>tests/</code>.</li>
 </ol>
-<p>This page works through a complete, compilable example: a simple first-order decay tracer. Real NSM1 derivatives are more complex, but the structure is identical. Use the example as a starting template and refer to <code>temperature.py</code>, <code>floating_algae.py</code>, and <code>nitrogen.py</code> for richer patterns.</p>
+<p>This page works through a complete, compilable example: a simple first-order decay tracer. Real Nutrient Simulation Module 1 (NSM1) derivatives are more complex, but the structure is identical. Use the example as a starting template and refer to <code>temperature.py</code>, <code>floating_algae.py</code>, and <code>nitrogen.py</code> for richer patterns.</p>
 <h2 id="step-1-create-the-process-subclass">Step 1. Create the Process Subclass<a class="headerlink" href="#step-1-create-the-process-subclass" title="Permanent link">&para;</a></h2>
 <p>Create <code>src/clearwater_modules_v2/processes/tracer.py</code> with the following skeleton.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="sd">&quot;&quot;&quot;First-order decay tracer process.&quot;&quot;&quot;</span>
@@ -3229,7 +3229,7 @@
 </span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a>    <span class="p">)</span>
 </span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a>    <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">v2_rate</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">v1_rate</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">)</span>
 </span></code></pre></div>
-<p>Unit tests that cover each <code>rate_*</code> method in isolation are also expected. See the <a href="../testing/">Testing Strategy</a> page for the full test taxonomy.</p>
+<p>Add unit tests that cover each <code>rate_*</code> method in isolation as well. See the <a href="../testing/">Testing Strategy</a> page for the full test taxonomy.</p>
 <h2 id="complete-example">Complete Example<a class="headerlink" href="#complete-example" title="Permanent link">&para;</a></h2>
 <p>The full <code>tracer.py</code> file, assembled from the snippets above, is a runnable starting template for new processes:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="sd">&quot;&quot;&quot;First-order decay tracer process.&quot;&quot;&quot;</span>

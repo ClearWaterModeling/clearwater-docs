@@ -4123,7 +4123,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <h2 id="background">Background<a class="anchor-link" href="#background">¶</a></h2><p>This notebook couples Clearwater-riverine (transport) with Clearwater-modules (reactions) - specifically, the Temperature Simulation Model (TSM). The Temperature Simulation Module (TSM) is an essential component of ClearWater (Corps Library for Environmental Analysis and Restoration of Watersheds). TSM plays a crucial role in simulating and predicting water temperature within aquatic ecosystems. TSM utilizes a comprehensive energy balance approach to account for various factors contributing to heat inputs and outputs in the water environment. It considers both external forcing functions and heat exchanges occurring at the water surface and the sediment-water interface. The primary contributors to heat exchange at the water surface include shortwave solar radiation, longwave atmospheric radiation, heat conduction from the atmosphere to the water, and direct heat inputs. Conversely, the primary factors that remove heat from the system are longwave radiation emitted by the water, evaporation, and heat conduction from the water to the atmosphere.
 The core principle behind TSM is the application of the laws of conservation of energy to compute water temperature. This means that the change in heat content of the water is directly related to changes in temperature, which, in turn, are influenced by various heat flux components. The specific heat of water is employed to establish this relationship. Each term of the heat flux equation can be calculated based on the input provided by the user, allowing for flexibility in modeling different environmental conditions</p>
 <h2 id="example-case-study">Example Case Study<a class="anchor-link" href="#example-case-study">¶</a></h2><p>This example shows how to run Clearwater Riverine coupled with Clearwater Modules in a fictional location, "Sumwere Creek" (shown below). The flow field for Sumwere Creek comes from a HEC-RAS 2D model, which has a domain of 2x2 km and a base mesh cell size of 100x100 meters.</p>
-<p><img alt="image.png" src="../docs/imgs/SumwereCreek_coarse.png"/></p>
+<p><img alt="image.png" src="../../assets/images/SumwereCreek_coarse.png"/></p>
 <p>The upstream boundary for Sumwere Creek is at the top left of the model domain, flowing into the domain at a constant 3 cms. At the first bend in the creek, there is an additional boundary representing a spring-fed tributary to the creek (1 cms). Further downstream, there is a meander in the stream forming a slow-flowing oxbow lake. There is another boundary flowing into that oxbow lake, representing a powerplant discharge (0.5 cms).</p>
 <p>The downstream boundary is a constant stage set at 20.75. The upstream inflows have a water temperature of 15 degrees C; the spring-fed creek has constant inflows of 5 C, and the powerplant is steady at 20 C with periodic higher temperature (25 C) discharges in a downstream meander.</p>
 <p>We simulate this scenario over the course of two full days, using meteorological parameters from Arizona (extreme temperature swings between night and day) to help show off the impacts of TSM.</p>
@@ -4202,9 +4202,9 @@ from shared import setup_function_logger</div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="ad68653c-41fe-4ed6-a14a-e66ea7868a21" tabindex="0">
+<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="cc196703-37d6-4dc4-b3c9-f5e9506c1cb2" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('ad68653c-41fe-4ed6-a14a-e66ea7868a21');
+var element = document.getElementById('cc196703-37d6-4dc4-b3c9-f5e9506c1cb2');
 (function(root) {
   function now() {
     return new Date();
@@ -4485,9 +4485,9 @@ function(Bokeh) {} // ensure no trailing comma for IE
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="58adabaa-f24a-4f6b-a05a-92885a174916" tabindex="0">
+<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="02a8f59e-9a8a-4279-90de-dff1733e0a32" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('58adabaa-f24a-4f6b-a05a-92885a174916');
+var element = document.getElementById('02a8f59e-9a8a-4279-90de-dff1733e0a32');
 
 if ((window.PyViz === undefined) || (window.PyViz instanceof HTMLElement)) {
   window.PyViz = {comms: {}, comm_status:{}, kernels:{}, receivers: {}, plot_index: []}
@@ -5118,9 +5118,9 @@ completed operation for: C:\Users\sjordan\OneDrive - LimnoTech\Documents\GitHub\
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="a63f8964-a843-4814-bf03-99563f1a5eb2" tabindex="0">
+<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="c0e97099-0d7a-4690-8639-e327dc96c6ea" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('a63f8964-a843-4814-bf03-99563f1a5eb2');
+var element = document.getElementById('c0e97099-0d7a-4690-8639-e327dc96c6ea');
 (function(root) {
   function now() {
     return new Date();
@@ -5401,9 +5401,9 @@ function(Bokeh) {} // ensure no trailing comma for IE
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="18483577-1d16-4e9f-bfb5-09bdec104154" tabindex="0">
+<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="2a355c36-7a46-4f8a-91cc-f4c384e3db32" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('18483577-1d16-4e9f-bfb5-09bdec104154');
+var element = document.getElementById('2a355c36-7a46-4f8a-91cc-f4c384e3db32');
 
 if ((window.PyViz === undefined) || (window.PyViz instanceof HTMLElement)) {
   window.PyViz = {comms: {}, comm_status:{}, kernels:{}, receivers: {}, plot_index: []}

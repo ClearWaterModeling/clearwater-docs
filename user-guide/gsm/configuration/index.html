@@ -3015,7 +3015,7 @@
 
 
 <h1 id="gsm-configuration">GSM Configuration<a class="headerlink" href="#gsm-configuration" title="Permanent link">&para;</a></h1>
-<p>GSM is configured as a list of constituents. Each constituent has its own kinetic parameters and initial condition. The module supports an arbitrary number of constituents; they are integrated independently at each time step.</p>
+<p>You configure GSM as a list of constituents. Each constituent has its own kinetic parameters and initial condition. The module supports an arbitrary number of constituents, and GSM integrates them independently at each time step.</p>
 <h2 id="per-constituent-parameters">Per-Constituent Parameters<a class="headerlink" href="#per-constituent-parameters" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -3065,7 +3065,7 @@ k(T) = k_{20} \, \theta^{T - 20}
 \]</div>
 <p>where <span class="arithmatex">\(T\)</span> is the water temperature in degrees C at the current cell and time step. See the <a href="../../../theory/kinetics/">Kinetics</a> theory page for background on the Arrhenius formulation.</p>
 <h2 id="settling">Settling<a class="headerlink" href="#settling" title="Permanent link">&para;</a></h2>
-<p>The settling flux is applied as a loss term proportional to <span class="arithmatex">\(v_s / H\)</span>, where <span class="arithmatex">\(H\)</span> is the cell water depth supplied by the transport model. The settled mass leaves the water column; GSM does not track it further. If resuspension or sediment-water coupling is required, use NSM1 or a specialized module.</p>
+<p>GSM applies the settling flux as a loss term proportional to <span class="arithmatex">\(v_s / H\)</span>, where <span class="arithmatex">\(H\)</span> is the cell water depth supplied by the transport model. The settled mass leaves the water column, and GSM does not track it further. If resuspension or sediment-water coupling is required, use NSM1 or a specialized module.</p>
 <h2 id="example-configuration">Example Configuration<a class="headerlink" href="#example-configuration" title="Permanent link">&para;</a></h2>
 <p>The following example configures three constituents: a conservative tracer, total suspended solids with settling, and a temperature-dependent decaying organic compound.</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">gsm</span><span class="p">:</span>
@@ -3092,9 +3092,9 @@ k(T) = k_{20} \, \theta^{T - 20}
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">      </span><span class="nt">C0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.0</span>
 </span></code></pre></div>
 <h2 id="initial-conditions">Initial Conditions<a class="headerlink" href="#initial-conditions" title="Permanent link">&para;</a></h2>
-<p>Initial concentrations may be supplied as a scalar (applied uniformly across the grid) or as a spatial field matching the transport model grid.</p>
+<p>You may supply initial concentrations as a scalar (applied uniformly across the grid) or as a spatial field matching the transport model grid.</p>
 <h2 id="boundary-conditions">Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Permanent link">&para;</a></h2>
-<p>Boundary inflows for each GSM constituent must be supplied through the transport model. GSM does not impose boundary fluxes directly; it acts only on the cell-local state provided by the host model.</p>
+<p>You must supply boundary inflows for each GSM constituent through the transport model. GSM does not impose boundary fluxes directly; GSM acts only on the cell-local state provided by the host model.</p>
 <h2 id="calibration-guidance">Calibration Guidance<a class="headerlink" href="#calibration-guidance" title="Permanent link">&para;</a></h2>
 <ul>
 <li>For conservative tracers, verify that simulated concentrations match transport-only behavior before enabling decay or settling.</li>

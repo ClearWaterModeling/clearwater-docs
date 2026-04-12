@@ -3227,7 +3227,7 @@
 
 
 <h1 id="plotting">Plotting<a class="headerlink" href="#plotting" title="Permanent link">&para;</a></h1>
-<p>ClearWater-Riverine provides built-in plotting utilities that render constituent concentration fields on the HEC-RAS 2D mesh. The plotting methods are attached to the <code>ClearwaterRiverine</code> class and use matplotlib, HoloViews, and GeoViews to produce both static images and interactive dynamic maps. This page documents each plotting method and shows how to use them in a Jupyter notebook.</p>
+<p>ClearWater-Riverine provides built-in plotting utilities that render constituent concentration fields on the HEC-RAS (Hydrologic Engineering Center's River Analysis System) 2D mesh. The plotting methods are attached to the <code>ClearwaterRiverine</code> class and use matplotlib, HoloViews, and GeoViews to produce both static images and interactive dynamic maps. This page documents each plotting method and shows how to use them in a Jupyter notebook.</p>
 <h2 id="plotting-methods-overview">Plotting Methods Overview<a class="headerlink" href="#plotting-methods-overview" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -3465,7 +3465,7 @@
 <p>For GIF export, use matplotlib animations built from successive <code>static_plot</code> calls, or use an external screen-capture tool against the HTML output.</p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>First call requires <code>crs</code>.</strong> Both <code>plot</code> and <code>static_plot</code> need a CRS on the first invocation to build the cell polygon geodataframe. Supply the HEC-RAS project CRS (for example, <code>EPSG:26917</code> for UTM Zone 17N) on the first call; subsequent calls reuse the cached geodataframe.</li>
+<li><strong>First call requires <code>crs</code>.</strong> Both <code>plot</code> and <code>static_plot</code> need a CRS on the first invocation to build the cell polygon geodataframe. Supply the HEC-RAS project coordinate reference system (CRS) (for example, <code>EPSG:26917</code> for Universal Transverse Mercator (UTM) Zone 17N) on the first call; subsequent calls reuse the cached geodataframe.</li>
 <li><strong>Plots do not render in Jupyter.</strong> Confirm that the Bokeh HoloViews extension is active by running <code>import holoviews as hv; hv.extension("bokeh")</code> in the notebook. ClearWater-Riverine loads the extension on import, but some notebook configurations require an explicit second call.</li>
 <li><strong>Color bar saturates.</strong> Pass an explicit <code>clim</code> tuple to override the auto-calculated min and max, which may be dominated by a small number of extreme cells near a boundary.</li>
 </ul>

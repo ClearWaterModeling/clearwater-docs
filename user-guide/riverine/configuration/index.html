@@ -2993,7 +2993,7 @@
 
 
 <h1 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h1>
-<p>ClearWater-Riverine reads model setup from a YAML configuration file. The configuration file points to the HEC-RAS 2D flow field, sets the diffusion coefficient, and defines each transported constituent with its initial and boundary conditions. This page documents the configuration schema, provides a complete example, and explains how to pass the configuration to the <code>ClearwaterRiverine</code> class.</p>
+<p>ClearWater-Riverine reads model setup from a YAML (YAML Ain't Markup Language) configuration file. The configuration file points to the HEC-RAS (Hydrologic Engineering Center's River Analysis System) 2D flow field, sets the diffusion coefficient, and defines each transported constituent with its initial and boundary conditions. This page documents the configuration schema, provides a complete example, and explains how to pass the configuration to the <code>ClearwaterRiverine</code> class.</p>
 <h2 id="top-level-schema">Top-Level Schema<a class="headerlink" href="#top-level-schema" title="Permanent link">&para;</a></h2>
 <p>The configuration file uses three required top-level keys. ClearWater-Riverine raises a <code>ValueError</code> if any required key is missing.</p>
 <table>
@@ -3008,7 +3008,7 @@
 <tr>
 <td><code>flow_field_filepath</code></td>
 <td>string</td>
-<td>Path to the HEC-RAS 2D plan HDF5 file (for example, <code>OhioRiver_m.p22.hdf</code>).</td>
+<td>Path to the HEC-RAS 2D plan Hierarchical Data Format version 5 (HDF5) file (for example, <code>OhioRiver_m.p22.hdf</code>).</td>
 </tr>
 <tr>
 <td><code>diffusion_coefficient</code></td>
@@ -3036,7 +3036,7 @@
 <tr>
 <td><code>initial_conditions</code></td>
 <td>string</td>
-<td>Path to a CSV file that specifies initial concentrations by cell index.</td>
+<td>Path to a comma-separated values (CSV) file that specifies initial concentrations by cell index.</td>
 </tr>
 <tr>
 <td><code>boundary_conditions</code></td>

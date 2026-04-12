@@ -2768,10 +2768,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#coupled-riverine-water-quality" class="md-nav__link">
+  <a href="#coupled-riverine-and-water-quality" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Coupled Riverine + Water Quality
+        Coupled Riverine and Water Quality
       
     </span>
   </a>
@@ -2811,8 +2811,8 @@
 
 <h1 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h1>
 <p>This section collects worked Jupyter notebook examples demonstrating how to set
-up, run, and analyze ClearWater simulations. Examples range from standalone
-water-quality modules to fully coupled hydrodynamic and water-quality workflows.</p>
+up, run, and analyze ClearWater simulations. The examples range from standalone
+water quality modules to fully coupled hydrodynamic and water quality workflows.</p>
 <p>The notebooks are rendered directly from the source repositories
 (<a href="https://github.com/EcohydrologyTeam/ClearWater-riverine"><code>ClearWater-riverine</code></a>
 and <a href="https://github.com/EcohydrologyTeam/ClearWater-modules"><code>ClearWater-modules</code></a>)
@@ -2821,55 +2821,58 @@ repository and open the corresponding notebook under its <code>examples/</code> 
 <h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p><strong><a href="notebooks/getting-started-riverine/">Getting Started with Riverine</a></strong> —
-  A first-look tour of the ClearWater-Riverine transport solver: load a HEC-RAS
-  2D mesh, configure boundary conditions, run advection-diffusion for a
-  conservative constituent, and plot the result.</p>
+<p><strong><a href="notebooks/getting-started-riverine/">Getting Started with Riverine</a></strong>.
+  A first-look tour of the ClearWater-Riverine transport solver. The notebook
+  loads a HEC-RAS (Hydrologic Engineering Center's River Analysis System) 2D
+  mesh, configures boundary conditions, runs advection-diffusion for a
+  conservative constituent, and plots the result.</p>
 </li>
 <li>
-<p><strong><a href="notebooks/standalone-tsm-example/">Standalone TSM Example</a></strong> —
-  Shows how to drive the Temperature Simulation Module (TSM) directly in
-  xarray, independent of any hydrodynamic driver. Useful for process
-  understanding and unit testing.</p>
+<p><strong><a href="notebooks/standalone-tsm-example/">Standalone TSM Example</a></strong>.
+  This notebook shows how to drive the Temperature Simulation Module (TSM)
+  directly in <code>xarray</code>, independent of any hydrodynamic driver. The standalone
+  workflow is useful for process understanding and unit testing.</p>
 </li>
 <li>
-<p><strong><a href="notebooks/model-architecture/">Model Architecture</a></strong> —
-  A walkthrough of the <code>clearwater_modules</code> architecture: how static and
-  dynamic variables are registered, how process functions are composed, and
-  how the model state evolves in time.</p>
+<p><strong><a href="notebooks/model-architecture/">Model Architecture</a></strong>.
+  A walkthrough of the <code>clearwater_modules</code> architecture. The notebook
+  describes how static and dynamic variables are registered, how process
+  functions are composed, and how the model state evolves in time.</p>
 </li>
 </ul>
-<h2 id="coupled-riverine-water-quality">Coupled Riverine + Water Quality<a class="headerlink" href="#coupled-riverine-water-quality" title="Permanent link">&para;</a></h2>
+<h2 id="coupled-riverine-and-water-quality">Coupled Riverine and Water Quality<a class="headerlink" href="#coupled-riverine-and-water-quality" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p><strong><a href="notebooks/coupled-riverine-tsm/">Coupled Riverine + TSM</a></strong> —
-  Couples ClearWater-Riverine transport with the TSM temperature module on a
-  coarse mesh, illustrating the standard coupling pattern (advect the state,
-  step the kinetics, write back).</p>
+<p><strong><a href="notebooks/coupled-riverine-tsm/">Coupled Riverine + TSM</a></strong>.
+  This example couples ClearWater-Riverine transport with the TSM temperature
+  module on a coarse mesh. The notebook illustrates the standard coupling
+  pattern: advect the state, step the kinetics, and write the updated state
+  back to the registry.</p>
 </li>
 <li>
-<p><strong><a href="notebooks/coupled-riverine-tsm-fine-mesh/">Coupled Riverine + TSM (Fine Mesh)</a></strong> —
-  The same TSM coupling exercise on a refined mesh, intended as a
+<p><strong><a href="notebooks/coupled-riverine-tsm-fine-mesh/">Coupled Riverine + TSM (Fine Mesh)</a></strong>.
+  The same TSM coupling exercise on a refined mesh. The notebook serves as a
   grid-sensitivity and performance reference.</p>
 </li>
 <li>
-<p><strong><a href="notebooks/coupled-riverine-tsm-nsm1/">Coupled Riverine + TSM + NSM1</a></strong> —
-  Full coupling of transport, temperature (TSM), and the Nutrient Simulation
-  Module (NSM1) including algae, nitrogen, phosphorus, carbon, CBOD, and
-  dissolved oxygen.</p>
+<p><strong><a href="notebooks/coupled-riverine-tsm-nsm1/">Coupled Riverine + TSM + NSM1</a></strong>.
+  A full coupling of transport, temperature (TSM), and the Nutrient Simulation
+  Module (NSM1) including algae, nitrogen, phosphorus, carbon, carbonaceous
+  biochemical oxygen demand (CBOD), and dissolved oxygen (DOX).</p>
 </li>
 <li>
-<p><strong><a href="notebooks/plot-coupled-nsm-simulation/">Plotting Coupled NSM1 Results</a></strong> —
-  Post-processing companion to the coupled NSM1 run: loads the saved output
-  and produces time-series and spatial plots of the simulated constituents.</p>
+<p><strong><a href="notebooks/plot-coupled-nsm-simulation/">Plotting Coupled NSM1 Results</a></strong>.
+  A post-processing companion to the coupled NSM1 run. The notebook loads the
+  saved output and produces time-series and spatial plots of the simulated
+  constituents.</p>
 </li>
 </ul>
 <h2 id="case-studies">Case Studies<a class="headerlink" href="#case-studies" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong><a href="notebooks/ohio-river/">Ohio River</a></strong> —
+<li><strong><a href="notebooks/ohio-river/">Ohio River</a></strong>.
   A larger-scale application of the coupled framework to a reach of the Ohio
-  River, demonstrating realistic boundary forcing and multi-constituent
-  transport.</li>
+  River. The case study demonstrates realistic boundary forcing and
+  multi-constituent transport.</li>
 </ul>
 
 

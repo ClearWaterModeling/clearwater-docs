@@ -3000,7 +3000,7 @@
 
 
 <h1 id="v2-architecture-walkthrough">v2 Architecture Walkthrough<a class="headerlink" href="#v2-architecture-walkthrough" title="Permanent link">&para;</a></h1>
-<p>This page describes the ClearWater v2 architecture that the ongoing refactor is building toward. The v2 architecture replaces the implicit variable-graph model used in v1 with an explicit <code>Process</code> abstract base class, a shared <code>VariableRegistry</code>, and optional chunked-zarr storage for memory-efficient long simulations. New contributors should read this page before adding code to <code>clearwater_modules_v2/</code>.</p>
+<p>This page describes the ClearWater v2 architecture that the ongoing refactor is building toward. The v2 architecture replaces the implicit variable-graph model used in v1 with an explicit <code>Process</code> abstract base class (ABC), a shared <code>VariableRegistry</code>, and optional chunked-zarr storage for memory-efficient long simulations. New contributors should read this page before adding code to <code>clearwater_modules_v2/</code>.</p>
 <h2 id="three-package-layout">Three-Package Layout<a class="headerlink" href="#three-package-layout" title="Permanent link">&para;</a></h2>
 <p>ClearWater is distributed as three cooperating Python packages. Each package owns a distinct concern, and the dependency arrows flow in one direction only.</p>
 <table>
@@ -3161,7 +3161,7 @@
 <li><strong>Full mode</strong> holds the entire simulation history in memory. The registry is populated once from all data sources, the time loop advances, and the output is written at the end.</li>
 <li><strong>Chunked mode</strong> streams through the simulation in time-chunked windows. On each chunk boundary the <code>Model</code> reads the next chunk from any <code>ChunkedDataSource</code> objects, runs the inner time loop over the chunk, writes the chunk's output to the <code>ChunkedZarrDataStore</code>, and calls <code>finalize_process</code> on each <code>Process</code>.</li>
 </ul>
-<p>Chunked mode is what makes long simulations feasible on machines with limited memory. A full-year hourly simulation on a fine mesh does not fit in RAM; a chunked run with a one-week chunk size does.</p>
+<p>Chunked mode is what makes long simulations feasible on machines with limited memory. A full-year hourly simulation on a fine mesh does not fit in random-access memory (RAM); a chunked run with a one-week chunk size does.</p>
 <div class="admonition tip">
 <p class="admonition-title">When to choose which mode</p>
 <p>Use full mode for short development runs and for debugging. Use chunked mode for production runs, for any simulation longer than a few days on a non-trivial mesh, and whenever output must be streamed rather than accumulated.</p>

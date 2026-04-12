@@ -2994,7 +2994,7 @@
 
 <h1 id="clearwater-data-overview">ClearWater-Data Overview<a class="headerlink" href="#clearwater-data-overview" title="Permanent link">&para;</a></h1>
 <h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
-<p>ClearWater-Data is the shared data-access layer used across the ClearWater water quality framework. It decouples the kinetic modules (TSM, NSM1, GSM, CSM, MSM) from the storage backend so that the same module code runs against in-memory arrays, on-disk zarr stores, or spatially distributed fields supplied by a transport model. ClearWater-Data is built on <code>xarray</code> and <code>numpy</code>, which provide labeled multidimensional arrays with named dimensions for time, space, and variable.</p>
+<p>ClearWater-Data is the shared data-access layer used across the ClearWater water quality framework. It decouples the kinetic modules (TSM, NSM1, GSM, CSM, and MSM) from the storage backend so that the same module code runs against in-memory arrays, on-disk zarr stores, or spatially distributed fields supplied by a transport model. ClearWater-Data is built on <code>xarray</code> and <code>numpy</code>, which provide labeled multidimensional arrays with named dimensions for time, space, and variable.</p>
 <h2 id="design-goals">Design Goals<a class="headerlink" href="#design-goals" title="Permanent link">&para;</a></h2>
 <p>ClearWater-Data is designed to meet three requirements that recur across ClearWater simulations:</p>
 <ul>

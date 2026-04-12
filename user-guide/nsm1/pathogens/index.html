@@ -3093,18 +3093,18 @@
 
 
 <h1 id="pathogens-px">Pathogens (PX)<a class="headerlink" href="#pathogens-px" title="Permanent link">&para;</a></h1>
-<p>NSM1 tracks a generic pathogen indicator <code>PX</code>, intended as a proxy for fecal indicator bacteria such as <em>Escherichia coli</em>, enterococci, or total coliforms. The model does not resolve species-specific physiology; instead, NSM1 uses a lumped first-order decay framework with separate terms for dark mortality, sunlight-induced inactivation, and settling. Concentrations are carried in colony-forming units per 100 mL (CFU 100 mL-1).</p>
+<p>NSM1 tracks a generic pathogen indicator <code>PX</code>, intended as a proxy for fecal indicator bacteria such as <em>Escherichia coli</em>, enterococci, or total coliforms. NSM1 does not resolve species-specific physiology; instead, NSM1 uses a lumped first-order decay framework with separate terms for dark mortality, sunlight-induced inactivation, and settling. NSM1 carries <code>PX</code> concentrations in colony-forming units per 100 mL (CFU 100 mL-1).</p>
 <h2 id="role-in-water-quality">Role in Water Quality<a class="headerlink" href="#role-in-water-quality" title="Permanent link">&para;</a></h2>
-<p>Fecal indicator bacteria are the regulatory basis for recreational water quality standards and shellfish harvesting restrictions. NSM1 provides a lightweight mechanism for tracking pathogen fate from a point or distributed source through a receiving water body, capturing the dominant loss processes while remaining computationally inexpensive. The pathogen state is one-way coupled to the physical environment: the model reads water temperature, solar radiation, depth, and light extinction, but pathogen concentration does not feed back into other NSM1 state variables.</p>
+<p>Fecal indicator bacteria are the regulatory basis for recreational water quality standards and shellfish harvesting restrictions. NSM1 provides a lightweight mechanism for tracking pathogen fate from a point or distributed source through a receiving water body, capturing the dominant loss processes while remaining computationally inexpensive. The <code>PX</code> state is one-way coupled to the physical environment: NSM1 reads water temperature, solar radiation, depth, and light extinction, but <code>PX</code> concentration does not feed back into other NSM1 state variables.</p>
 <h2 id="governing-equation">Governing Equation<a class="headerlink" href="#governing-equation" title="Permanent link">&para;</a></h2>
-<p>The pathogen mass balance, implemented in <code>dPXdt</code> at <code>processes.py</code> ~line 3209, sums three first-order sinks:</p>
+<p>The <code>PX</code> mass balance, implemented in <code>dPXdt</code> at <code>processes.py</code> ~line 3209, sums three first-order sinks:</p>
 <div class="arithmatex">\[
 \frac{d[PX]}{dt} = -k_{dx}(T) \cdot PX - \frac{\alpha_{px} \, q_{solar}}{L \, h} \left(1 - e^{-L h}\right) PX - \frac{v_x}{h} PX
 \]</div>
-<p>All three terms are losses; the model does not include a source term, so pathogens are introduced only through boundary conditions and external loads.</p>
+<p>All three terms are losses; NSM1 does not include a source term, so pathogens are introduced only through boundary conditions and external loads.</p>
 <h2 id="process-equations">Process Equations<a class="headerlink" href="#process-equations" title="Permanent link">&para;</a></h2>
 <h3 id="temperature-dependent-dark-decay">Temperature-dependent dark decay<a class="headerlink" href="#temperature-dependent-dark-decay" title="Permanent link">&para;</a></h3>
-<p>The model represents natural mortality as a first-order loss with Arrhenius temperature dependence. The routine <code>kdx_tc</code> at ~line 3141 computes the temperature-corrected rate:</p>
+<p>NSM1 represents natural mortality as a first-order loss with Arrhenius temperature dependence. The <code>kdx_tc</code> routine at ~line 3141 computes the temperature-corrected rate:</p>
 <div class="arithmatex">\[
 k_{dx}(T) = k_{dx,20} \, \theta_{dx}^{T-20}
 \]</div>

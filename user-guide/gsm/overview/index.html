@@ -2994,7 +2994,7 @@
 
 <h1 id="gsm-overview">GSM Overview<a class="headerlink" href="#gsm-overview" title="Permanent link">&para;</a></h1>
 <h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
-<p>The General Constituents Simulation Module (GSM) provides a lightweight kinetic framework for any number of user-defined water quality constituents. Each constituent is integrated independently using a first-order decay law with Arrhenius temperature correction and an optional settling flux. GSM is designed for substances that do not warrant the specialized biogeochemistry of the nutrient, contaminant, or mercury modules.</p>
+<p>The General Constituents Simulation Module (GSM) provides a lightweight kinetic framework for any number of user-defined water quality constituents. GSM integrates each constituent independently using a first-order decay law with Arrhenius temperature correction and an optional settling flux. GSM is designed for substances that do not warrant the specialized biogeochemistry of the nutrient, contaminant, or mercury modules.</p>
 <h2 id="what-gsm-simulates">What GSM Simulates<a class="headerlink" href="#what-gsm-simulates" title="Permanent link">&para;</a></h2>
 <p>For each constituent <span class="arithmatex">\(C\)</span>, GSM integrates the cell-local budget:</p>
 <div class="arithmatex">\[
@@ -3055,7 +3055,7 @@
 </table>
 <h2 id="module-scope">Module Scope<a class="headerlink" href="#module-scope" title="Permanent link">&para;</a></h2>
 <p>GSM computes only the cell-local kinetic tendencies. Advection, dispersion, and boundary fluxes are handled by the external transport model (for example, HEC-RAS 2D via ClearWater-Riverine). GSM receives the current concentration field and water temperature, computes the decay and settling tendencies, and returns the updated concentrations to the transport model.</p>
-<p>Each constituent is integrated independently; GSM does not represent reactions between constituents. If coupling between species is required, use the appropriate specialized module or extend GSM with custom kinetics.</p>
+<p>GSM integrates each constituent independently and does not represent reactions between constituents. If coupling between species is required, use the appropriate specialized module or extend GSM with custom kinetics.</p>
 <h2 id="inputs-at-a-glance">Inputs at a Glance<a class="headerlink" href="#inputs-at-a-glance" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
