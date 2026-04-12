@@ -102,8 +102,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="ClearWater Documentation" class="md-header__button md-logo" aria-label="ClearWater Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -423,8 +422,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="ClearWater Documentation" class="md-nav__button md-logo" aria-label="ClearWater Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
     ClearWater Documentation
@@ -2045,6 +2043,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2108,7 +2114,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/standalone-tsm/" class="md-nav__link">
+      <a href="../../examples/notebooks/getting-started-riverine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 1: Getting Started with Conservative Transport
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/standalone-tsm-example/" class="md-nav__link">
         
   
   
@@ -2136,14 +2170,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/coupled-riverine-tsm/" class="md-nav__link">
+      <a href="../../examples/notebooks/model-architecture/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Coupled Riverine + TSM
+    Clearwater Modules Architecture
   
 
     
@@ -2164,14 +2198,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/coupled-riverine-tsm-nsm1/" class="md-nav__link">
+      <a href="../../examples/notebooks/coupled-riverine-tsm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Coupled Riverine + TSM + NSM1
+    ClearWater-Riverine Demo 2: Coupling Transport to Water Quality Reactions with ClearWater-Modules
   
 
     
@@ -2192,14 +2226,98 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/sumwere-creek/" class="md-nav__link">
+      <a href="../../examples/notebooks/coupled-riverine-tsm-fine-mesh/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Sumwere Creek
+    ClearWater-Riverine Demo 2: Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/coupled-riverine-tsm-nsm1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 3 (part 1): Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/plot-coupled-nsm-simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 3 (part 2): Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/ohio-river/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ohio River Model
   
 
     
@@ -2661,11 +2779,52 @@
 
 
 <h1 id="clearwater_data-api-reference">clearwater_data API Reference<a class="headerlink" href="#clearwater_data-api-reference" title="Permanent link">&para;</a></h1>
-<p><em>API documentation is auto-generated from source code docstrings.</em></p>
-<!-- Uncomment when clearwater_data is installable:
-::: clearwater_data.variable_registry
-::: clearwater_data.chunked_zarr_data_store
+<p>The <code>clearwater_data</code> package provides the data access and storage layer for ClearWater, including the <code>VariableRegistry</code> for time-indexed variable access and the <code>ChunkedZarrDataStore</code> for out-of-core simulation state.</p>
+<div class="admonition warning">
+<p class="admonition-title">Package not yet installable in documentation environment</p>
+<p><code>clearwater_data</code> is under active development and is not currently installed in the documentation build environment. When the package is published, this page will be populated with auto-generated API documentation from the source docstrings.</p>
+<p>Once <code>clearwater_data</code> is installable, uncomment the <code>mkdocstrings</code> directives below and the API reference will appear on the next documentation build.</p>
+</div>
+<!--
+## Package Entry Point
+
+::: clearwater_data
+    options:
+      show_root_heading: true
+      show_source: false
+      members_order: source
+
+## Variable Registry
+
+::: clearwater_data.variables
+    options:
+      show_root_heading: true
+      show_source: true
+      members_order: source
+
+## Input / Output
+
 ::: clearwater_data.io
+    options:
+      show_root_heading: true
+      show_source: false
+      members_order: source
+
+## Zarr-Backed Data Store
+
+::: clearwater_data.io.zarr
+    options:
+      show_root_heading: true
+      show_source: true
+      members_order: source
+
+## Custom Types
+
+::: clearwater_data.custom_types
+    options:
+      show_root_heading: true
+      show_source: true
+      members_order: source
 -->
 
 

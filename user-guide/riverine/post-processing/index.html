@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#post-processing-and-mass-balance" class="md-skip">
+        <a href="#post-processing" class="md-skip">
           Skip to content
         </a>
       
@@ -102,8 +102,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="ClearWater Documentation" class="md-header__button md-logo" aria-label="ClearWater Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -423,8 +422,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="ClearWater Documentation" class="md-nav__button md-logo" aria-label="ClearWater Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     ClearWater Documentation
@@ -931,6 +929,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post-Processing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -947,6 +963,147 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mass-flux-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mass Flux Recovery
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mass Flux Recovery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loaded-meshes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loaded Meshes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-mass-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Mass Balance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Global Mass Balance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpreting-closure-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting Closure Error
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-mass-balance-at-100-mg-l-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference Mass Balance at 100 mg L-1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge-vertical-area-and-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edge Vertical Area and Volume
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-the-boundary-data-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working with the Boundary Data Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typical-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typical Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2073,6 +2230,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2136,7 +2301,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/standalone-tsm/" class="md-nav__link">
+      <a href="../../../examples/notebooks/getting-started-riverine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 1: Getting Started with Conservative Transport
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/notebooks/standalone-tsm-example/" class="md-nav__link">
         
   
   
@@ -2164,14 +2357,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/coupled-riverine-tsm/" class="md-nav__link">
+      <a href="../../../examples/notebooks/model-architecture/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Coupled Riverine + TSM
+    Clearwater Modules Architecture
   
 
     
@@ -2192,14 +2385,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/coupled-riverine-tsm-nsm1/" class="md-nav__link">
+      <a href="../../../examples/notebooks/coupled-riverine-tsm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Coupled Riverine + TSM + NSM1
+    ClearWater-Riverine Demo 2: Coupling Transport to Water Quality Reactions with ClearWater-Modules
   
 
     
@@ -2220,14 +2413,98 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/sumwere-creek/" class="md-nav__link">
+      <a href="../../../examples/notebooks/coupled-riverine-tsm-fine-mesh/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Sumwere Creek
+    ClearWater-Riverine Demo 2: Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/notebooks/coupled-riverine-tsm-nsm1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 3 (part 1): Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/notebooks/plot-coupled-nsm-simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 3 (part 2): Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/notebooks/ohio-river/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ohio River Model
   
 
     
@@ -2657,6 +2934,136 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mass-flux-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mass Flux Recovery
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mass Flux Recovery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loaded-meshes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loaded Meshes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-mass-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Mass Balance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Global Mass Balance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpreting-closure-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting Closure Error
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-mass-balance-at-100-mg-l-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference Mass Balance at 100 mg L-1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge-vertical-area-and-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edge Vertical Area and Volume
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-the-boundary-data-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working with the Boundary Data Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typical-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typical Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2675,9 +3082,199 @@
   
 
 
-<h1 id="post-processing-and-mass-balance">Post-Processing and Mass Balance<a class="headerlink" href="#post-processing-and-mass-balance" title="Permanent link">&para;</a></h1>
-<p><em>This page is under development.</em></p>
-<p>This page will cover post-processing workflows for ClearWater-Riverine results, including mass balance verification, extracting time series at monitoring points, and exporting results to common formats.</p>
+<h1 id="post-processing">Post-Processing<a class="headerlink" href="#post-processing" title="Permanent link">&para;</a></h1>
+<p>ClearWater-Riverine provides post-processing utilities for mass balance accounting, edge-wise mass flux recovery, and derived geometric quantities. These utilities operate on the mesh produced by a completed simulation or on a mesh loaded from a saved Zarr dataset. The utilities are implemented in <code>src/clearwater_riverine/postproc_util.py</code>.</p>
+<h2 id="mass-flux-recovery">Mass Flux Recovery<a class="headerlink" href="#mass-flux-recovery" title="Permanent link">&para;</a></h2>
+<p>Every call to <code>ClearwaterRiverine.update</code> records advective, diffusive, and total mass flux across every edge in the mesh. The fluxes are stored in three arrays on each <code>Constituent</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Array</th>
+<th>Shape</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>advection_mass_flux</code></td>
+<td><code>(time, nedge)</code></td>
+<td>Mass crossing each edge over the timestep due to advection. Signed by the HEC-RAS face convention.</td>
+</tr>
+<tr>
+<td><code>diffusion_mass_flux</code></td>
+<td><code>(time, nedge)</code></td>
+<td>Mass crossing each edge over the timestep due to diffusion.</td>
+</tr>
+<tr>
+<td><code>total_mass_flux</code></td>
+<td><code>(time, nedge)</code></td>
+<td>Sum of advective and diffusive mass flux.</td>
+</tr>
+</tbody>
+</table>
+<p>Each entry represents the cumulative mass transport over one timestep (concentration units multiplied by the timestep duration and the face flow or diffusive flow). The sign convention follows the HEC-RAS face flow convention: positive values indicate transport from <code>edges_face1</code> to <code>edges_face2</code>.</p>
+<h3 id="loaded-meshes">Loaded Meshes<a class="headerlink" href="#loaded-meshes" title="Permanent link">&para;</a></h3>
+<p>When a simulation is reconstructed from a saved mesh via the <code>mesh_file_path</code> argument, mass fluxes are not yet populated. The post-processing utilities detect this and call <code>_calculate_mass_flux</code> to recompute the fluxes using the stored concentrations and advection and diffusion coefficients. You do not need to invoke this function directly; the mass balance utilities handle it automatically.</p>
+<h2 id="global-mass-balance">Global Mass Balance<a class="headerlink" href="#global-mass-balance" title="Permanent link">&para;</a></h2>
+<p>The <code>_mass_bal_global</code> function computes a global mass balance for a single constituent across the entire domain and the entire simulation horizon. The function returns a <code>pandas.DataFrame</code> with one row per simulation and columns that quantify starting mass, ending mass, per-boundary flows and fluxes, and closure error.</p>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">clearwater_riverine.postproc_util</span><span class="w"> </span><span class="kn">import</span> <span class="n">_mass_bal_global</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">df</span> <span class="o">=</span> <span class="n">_mass_bal_global</span><span class="p">(</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">simulation</span><span class="o">=</span><span class="n">simulation</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">constituent_name</span><span class="o">=</span><span class="s2">&quot;ecoli&quot;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">boundary_data_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
+</span></code></pre></div>
+<p>Pass <code>boundary_data_path</code> when the simulation was reconstructed from a saved mesh and the boundary data CSV is stored alongside the mesh file.</p>
+<h3 id="output-columns">Output Columns<a class="headerlink" href="#output-columns" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Vol_start</code></td>
+<td>Total domain volume at the first timestep.</td>
+</tr>
+<tr>
+<td><code>Mass_start</code></td>
+<td>Total constituent mass at the first timestep.</td>
+</tr>
+<tr>
+<td><code>Vol_end</code></td>
+<td>Total domain volume at the last timestep.</td>
+</tr>
+<tr>
+<td><code>Mass_end</code></td>
+<td>Total constituent mass at the last timestep.</td>
+</tr>
+<tr>
+<td><code>&lt;bc_name&gt;_vol</code></td>
+<td>Net volume exchanged across boundary <code>&lt;bc_name&gt;</code> over the simulation horizon.</td>
+</tr>
+<tr>
+<td><code>&lt;bc_name&gt;_mass</code></td>
+<td>Net mass exchanged across boundary <code>&lt;bc_name&gt;</code> over the simulation horizon.</td>
+</tr>
+<tr>
+<td><code>&lt;bc_name&gt;_in_vol</code></td>
+<td>Volume entering the domain across boundary <code>&lt;bc_name&gt;</code>.</td>
+</tr>
+<tr>
+<td><code>&lt;bc_name&gt;_in_mass</code></td>
+<td>Mass entering the domain across boundary <code>&lt;bc_name&gt;</code>.</td>
+</tr>
+<tr>
+<td><code>&lt;bc_name&gt;_out_vol</code></td>
+<td>Volume leaving the domain across boundary <code>&lt;bc_name&gt;</code>.</td>
+</tr>
+<tr>
+<td><code>&lt;bc_name&gt;_out_mass</code></td>
+<td>Mass leaving the domain across boundary <code>&lt;bc_name&gt;</code>.</td>
+</tr>
+<tr>
+<td><code>bcTotalVolInOutAll</code></td>
+<td>Sum of net boundary volume exchanges across all boundaries.</td>
+</tr>
+<tr>
+<td><code>bcTotalMassInOutAll</code></td>
+<td>Sum of net boundary mass exchanges across all boundaries.</td>
+</tr>
+<tr>
+<td><code>vol_end_calc</code></td>
+<td>Ending volume predicted by adding net boundary exchanges to starting volume.</td>
+</tr>
+<tr>
+<td><code>mass_end_calc</code></td>
+<td>Ending mass predicted by adding net boundary exchanges to starting mass.</td>
+</tr>
+<tr>
+<td><code>error_vol</code></td>
+<td>Difference between predicted and observed ending volume.</td>
+</tr>
+<tr>
+<td><code>prct_error_vol</code></td>
+<td>Volume closure error expressed as a percentage of inflow volume.</td>
+</tr>
+<tr>
+<td><code>error_mass</code></td>
+<td>Difference between predicted and observed ending mass.</td>
+</tr>
+<tr>
+<td><code>prct_error_mass</code></td>
+<td>Mass closure error expressed as a percentage of inflow mass.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interpreting-closure-error">Interpreting Closure Error<a class="headerlink" href="#interpreting-closure-error" title="Permanent link">&para;</a></h3>
+<p>A well-posed simulation should produce <code>prct_error_mass</code> values that are small compared to the total inflow. Persistently large closure error often indicates:</p>
+<ul>
+<li>A boundary line that is present in the HEC-RAS plan but missing from the boundary data lookup.</li>
+<li>A saved mesh that was not paired with the correct boundary data CSV.</li>
+<li>HEC-RAS output with volumes that do not match the time-integrated face flows at the reported precision.</li>
+</ul>
+<h2 id="reference-mass-balance-at-100-mg-l-1">Reference Mass Balance at 100 mg L-1<a class="headerlink" href="#reference-mass-balance-at-100-mg-l-1" title="Permanent link">&para;</a></h2>
+<p>The <code>_mass_bal_global_100_Ans</code> function performs the same accounting as <code>_mass_bal_global</code> but forces all concentrations (initial, boundary, and ending) to 100 mg L-1. The result represents a pure volumetric accounting expressed in mass units and serves as a reference for isolating volume closure error from transport error. Use this utility when diagnosing discrepancies between the HEC-RAS volume field and the time-integrated face flow field.</p>
+<h2 id="edge-vertical-area-and-volume">Edge Vertical Area and Volume<a class="headerlink" href="#edge-vertical-area-and-volume" title="Permanent link">&para;</a></h2>
+<p>Several post-processing workflows require the vertical area of each edge (face depth times face width) at each timestep. ClearWater-Riverine stores this quantity on the mesh and uses it internally when building the diffusion term. The value is available through the mesh variables exposed in <code>clearwater_riverine.variables</code>.</p>
+<p>Cell volumes at each timestep are stored in <code>simulation.mesh.volume</code> with dimensions <code>(time, nface)</code>. The real-cell volume at the first timestep is accessed with:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">nreal_index</span> <span class="o">=</span> <span class="n">simulation</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;nreal&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">vol_start</span> <span class="o">=</span> <span class="n">simulation</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">volume</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="n">nreal_index</span><span class="p">]</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">total_vol_start</span> <span class="o">=</span> <span class="n">vol_start</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">values</span>
+</span></code></pre></div>
+<h2 id="working-with-the-boundary-data-table">Working with the Boundary Data Table<a class="headerlink" href="#working-with-the-boundary-data-table" title="Permanent link">&para;</a></h2>
+<p>The <code>simulation.boundary_data</code> attribute is a <code>pandas.DataFrame</code> that maps HEC-RAS boundary line names to the edge (face) indices that compose each line. The post-processing utilities consume this table to split edge-wise mass flux into per-boundary totals. The relevant columns are:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Name</code></td>
+<td>Boundary line name as it appears in the HEC-RAS plan.</td>
+</tr>
+<tr>
+<td><code>BC Line ID</code></td>
+<td>Integer identifier assigned by HEC-RAS to the boundary line.</td>
+</tr>
+<tr>
+<td><code>Face Index</code></td>
+<td>Edge index (<code>nedge</code>) in the ClearWater-Riverine mesh for a single face of the boundary line.</td>
+</tr>
+</tbody>
+</table>
+<p>If you save a simulation with <code>ClearwaterRiverine.finalize(save=True, output_filepath=...)</code>, the boundary data table is written to <code>&lt;output_filepath_stem&gt;_boundary_data.csv</code> in the output directory.</p>
+<h2 id="typical-workflow">Typical Workflow<a class="headerlink" href="#typical-workflow" title="Permanent link">&para;</a></h2>
+<p>A representative post-processing workflow starts from either a live simulation or a saved mesh.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">clearwater_riverine</span><span class="w"> </span><span class="kn">import</span> <span class="n">ClearwaterRiverine</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">clearwater_riverine.postproc_util</span><span class="w"> </span><span class="kn">import</span> <span class="n">_mass_bal_global</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Load a previously saved simulation</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">simulation</span> <span class="o">=</span> <span class="n">ClearwaterRiverine</span><span class="p">(</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">mesh_file_path</span><span class="o">=</span><span class="s2">&quot;results/ohio_river.zarr&quot;</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">)</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># Global mass balance for a single constituent</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">mass_balance_df</span> <span class="o">=</span> <span class="n">_mass_bal_global</span><span class="p">(</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="n">simulation</span><span class="o">=</span><span class="n">simulation</span><span class="p">,</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="n">constituent_name</span><span class="o">=</span><span class="s2">&quot;ecoli&quot;</span><span class="p">,</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="n">boundary_data_path</span><span class="o">=</span><span class="s2">&quot;results/ohio_river_boundary_data.csv&quot;</span><span class="p">,</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="p">)</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="nb">print</span><span class="p">(</span><span class="n">mass_balance_df</span><span class="p">[[</span><span class="s2">&quot;Mass_start&quot;</span><span class="p">,</span> <span class="s2">&quot;Mass_end&quot;</span><span class="p">,</span> <span class="s2">&quot;prct_error_mass&quot;</span><span class="p">]])</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Post-processing utilities whose names begin with an underscore are considered internal to the current release. The public post-processing API is expected to stabilize in a future release; the underlying behavior described on this page is the intended long-term design.</p>
+</div>
 
 
 

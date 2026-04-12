@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#energy-balance-components" class="md-skip">
+        <a href="#tsm-energy-balance" class="md-skip">
           Skip to content
         </a>
       
@@ -102,8 +102,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="ClearWater Documentation" class="md-header__button md-logo" aria-label="ClearWater Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -423,8 +422,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="ClearWater Documentation" class="md-nav__button md-logo" aria-label="ClearWater Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     ClearWater Documentation
@@ -1101,6 +1099,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Energy Balance
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1117,6 +1133,141 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#governing-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governing Equation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heat-flux-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heat Flux Terms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Heat Flux Terms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#net-shortwave-radiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Net Shortwave Radiation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longwave-atmospheric-radiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Longwave Atmospheric Radiation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longwave-upwelling-radiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Longwave Upwelling Radiation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latent-heat-flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latent Heat Flux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensible-heat-flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensible Heat Flux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sediment-heat-flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sediment Heat Flux
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sign-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sign Convention
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Time Integration
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2073,6 +2224,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2136,7 +2295,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/standalone-tsm/" class="md-nav__link">
+      <a href="../../../examples/notebooks/getting-started-riverine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 1: Getting Started with Conservative Transport
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/notebooks/standalone-tsm-example/" class="md-nav__link">
         
   
   
@@ -2164,14 +2351,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/coupled-riverine-tsm/" class="md-nav__link">
+      <a href="../../../examples/notebooks/model-architecture/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Coupled Riverine + TSM
+    Clearwater Modules Architecture
   
 
     
@@ -2192,14 +2379,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/coupled-riverine-tsm-nsm1/" class="md-nav__link">
+      <a href="../../../examples/notebooks/coupled-riverine-tsm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Coupled Riverine + TSM + NSM1
+    ClearWater-Riverine Demo 2: Coupling Transport to Water Quality Reactions with ClearWater-Modules
   
 
     
@@ -2220,14 +2407,98 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/sumwere-creek/" class="md-nav__link">
+      <a href="../../../examples/notebooks/coupled-riverine-tsm-fine-mesh/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Sumwere Creek
+    ClearWater-Riverine Demo 2: Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/notebooks/coupled-riverine-tsm-nsm1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 3 (part 1): Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/notebooks/plot-coupled-nsm-simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 3 (part 2): Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/notebooks/ohio-river/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ohio River Model
   
 
     
@@ -2657,6 +2928,130 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#governing-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governing Equation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heat-flux-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heat Flux Terms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Heat Flux Terms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#net-shortwave-radiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Net Shortwave Radiation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longwave-atmospheric-radiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Longwave Atmospheric Radiation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longwave-upwelling-radiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Longwave Upwelling Radiation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latent-heat-flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latent Heat Flux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensible-heat-flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensible Heat Flux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sediment-heat-flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sediment Heat Flux
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sign-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sign Convention
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Time Integration
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2675,9 +3070,70 @@
   
 
 
-<h1 id="energy-balance-components">Energy Balance Components<a class="headerlink" href="#energy-balance-components" title="Permanent link">&para;</a></h1>
-<p><em>This page is under development.</em></p>
-<p>This page will detail the individual heat flux terms in the TSM energy balance: net solar radiation, longwave atmospheric radiation, longwave back radiation, evaporative heat loss, conductive heat transfer, and sediment heat flux.</p>
+<h1 id="tsm-energy-balance">TSM Energy Balance<a class="headerlink" href="#tsm-energy-balance" title="Permanent link">&para;</a></h1>
+<p>TSM applies conservation of energy to a well-mixed water column in each computational cell. The rate of change of water temperature is proportional to the net heat flux across the cell boundaries, divided by the heat capacity of the water volume.</p>
+<h2 id="governing-equation">Governing Equation<a class="headerlink" href="#governing-equation" title="Permanent link">&para;</a></h2>
+<p>The temperature tendency in each cell is:</p>
+<div class="arithmatex">\[
+\rho_w \, c_{p,w} \, V \, \frac{\partial T_w}{\partial t} = A_s \left( q_{sw} + q_{lw,in} - q_{lw,out} - q_{lat} - q_{sen} \right) + A_b \, q_{sed}
+\]</div>
+<p>where:</p>
+<ul>
+<li><span class="arithmatex">\(T_w\)</span> is the water temperature (degrees C).</li>
+<li><span class="arithmatex">\(\rho_w\)</span> is the density of water (kg m<span class="arithmatex">\(^{-3}\)</span>).</li>
+<li><span class="arithmatex">\(c_{p,w}\)</span> is the specific heat of water (J kg<span class="arithmatex">\(^{-1}\)</span> K<span class="arithmatex">\(^{-1}\)</span>).</li>
+<li><span class="arithmatex">\(V\)</span> is the water volume of the cell (m<span class="arithmatex">\(^3\)</span>).</li>
+<li><span class="arithmatex">\(A_s\)</span> is the water surface area (m<span class="arithmatex">\(^2\)</span>).</li>
+<li><span class="arithmatex">\(A_b\)</span> is the sediment-water interface area (m<span class="arithmatex">\(^2\)</span>).</li>
+<li><span class="arithmatex">\(q_{sw}\)</span>, <span class="arithmatex">\(q_{lw,in}\)</span>, <span class="arithmatex">\(q_{lw,out}\)</span>, <span class="arithmatex">\(q_{lat}\)</span>, <span class="arithmatex">\(q_{sen}\)</span>, and <span class="arithmatex">\(q_{sed}\)</span> are the shortwave, incoming longwave, outgoing longwave, latent, sensible, and sediment heat fluxes (W m<span class="arithmatex">\(^{-2}\)</span>).</li>
+</ul>
+<p>A positive flux on the right-hand side adds heat to the water column; a negative flux removes heat.</p>
+<h2 id="heat-flux-terms">Heat Flux Terms<a class="headerlink" href="#heat-flux-terms" title="Permanent link">&para;</a></h2>
+<h3 id="net-shortwave-radiation">Net Shortwave Radiation<a class="headerlink" href="#net-shortwave-radiation" title="Permanent link">&para;</a></h3>
+<p>The net shortwave flux absorbed at the water surface is:</p>
+<div class="arithmatex">\[
+q_{sw} = (1 - \alpha_s) \, q_{sw,\text{inc}}
+\]</div>
+<p>where <span class="arithmatex">\(q_{sw,\text{inc}}\)</span> is the incident solar radiation at the surface (W m<span class="arithmatex">\(^{-2}\)</span>) and <span class="arithmatex">\(\alpha_s\)</span> is the surface albedo. TSM accepts incident shortwave radiation directly as a meteorological input, so atmospheric attenuation, time-of-day effects, and cloud attenuation are resolved in the forcing data rather than internally.</p>
+<h3 id="longwave-atmospheric-radiation">Longwave Atmospheric Radiation<a class="headerlink" href="#longwave-atmospheric-radiation" title="Permanent link">&para;</a></h3>
+<p>The downward longwave flux from the atmosphere follows a Stefan-Boltzmann formulation with an emissivity that depends on air temperature, vapor pressure, and cloud cover:</p>
+<div class="arithmatex">\[
+q_{lw,in} = \varepsilon_a \, \sigma \, (T_a + 273.15)^4 \, (1 + 0.17 \, C^2)
+\]</div>
+<p>where <span class="arithmatex">\(\varepsilon_a\)</span> is the atmospheric emissivity, <span class="arithmatex">\(\sigma = 5.67 \times 10^{-8}\)</span> W m<span class="arithmatex">\(^{-2}\)</span> K<span class="arithmatex">\(^{-4}\)</span> is the Stefan-Boltzmann constant, <span class="arithmatex">\(T_a\)</span> is air temperature (degrees C), and <span class="arithmatex">\(C\)</span> is the fractional cloud cover.</p>
+<h3 id="longwave-upwelling-radiation">Longwave Upwelling Radiation<a class="headerlink" href="#longwave-upwelling-radiation" title="Permanent link">&para;</a></h3>
+<p>The water surface radiates as a near-blackbody:</p>
+<div class="arithmatex">\[
+q_{lw,out} = \varepsilon_w \, \sigma \, (T_w + 273.15)^4
+\]</div>
+<p>where <span class="arithmatex">\(\varepsilon_w \approx 0.97\)</span> is the emissivity of water.</p>
+<h3 id="latent-heat-flux">Latent Heat Flux<a class="headerlink" href="#latent-heat-flux" title="Permanent link">&para;</a></h3>
+<p>Evaporation removes latent heat from the water column. TSM uses a wind-function formulation:</p>
+<div class="arithmatex">\[
+q_{lat} = f(U_w) \, \left( e_s(T_w) - e_a \right)
+\]</div>
+<p>where <span class="arithmatex">\(e_s(T_w)\)</span> is the saturation vapor pressure at the water surface temperature, <span class="arithmatex">\(e_a\)</span> is the ambient vapor pressure, and <span class="arithmatex">\(f(U_w)\)</span> is an empirical wind function of the form:</p>
+<div class="arithmatex">\[
+f(U_w) = a + b \, U_w^c
+\]</div>
+<p>The coefficients <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span>, and <span class="arithmatex">\(c\)</span> are user-supplied (see the <a href="../configuration/">Configuration</a> page).</p>
+<h3 id="sensible-heat-flux">Sensible Heat Flux<a class="headerlink" href="#sensible-heat-flux" title="Permanent link">&para;</a></h3>
+<p>Sensible heat transfer between the air and water is driven by the temperature difference and the same wind function used for evaporation (Bowen ratio analogy):</p>
+<div class="arithmatex">\[
+q_{sen} = C_B \, f(U_w) \, \left( T_w - T_a \right)
+\]</div>
+<p>where <span class="arithmatex">\(C_B\)</span> is the Bowen coefficient (typically <span class="arithmatex">\(0.61\)</span> mbar K<span class="arithmatex">\(^{-1}\)</span>) times the ratio of the atmospheric pressure to a reference pressure.</p>
+<h3 id="sediment-heat-flux">Sediment Heat Flux<a class="headerlink" href="#sediment-heat-flux" title="Permanent link">&para;</a></h3>
+<p>Heat conduction across the sediment-water interface is computed from the temperature gradient between the water and an underlying sediment layer of prescribed thickness and thermal diffusivity:</p>
+<div class="arithmatex">\[
+q_{sed} = \frac{k_{sed}}{\Delta z_{sed}} \, (T_{sed} - T_w)
+\]</div>
+<p>where <span class="arithmatex">\(k_{sed}\)</span> is the sediment thermal conductivity (W m<span class="arithmatex">\(^{-1}\)</span> K<span class="arithmatex">\(^{-1}\)</span>), <span class="arithmatex">\(\Delta z_{sed}\)</span> is the characteristic sediment layer depth (m), and <span class="arithmatex">\(T_{sed}\)</span> is the sediment temperature. The sediment temperature is either held constant or integrated forward with its own energy balance.</p>
+<h2 id="sign-convention">Sign Convention<a class="headerlink" href="#sign-convention" title="Permanent link">&para;</a></h2>
+<p>All fluxes in the governing equation use the convention that positive values transfer energy from the surrounding environment into the water column. The outgoing longwave, latent, and sensible fluxes appear with negative signs because they remove heat from the water when <span class="arithmatex">\(T_w &gt; T_a\)</span> and the air is unsaturated.</p>
+<h2 id="time-integration">Time Integration<a class="headerlink" href="#time-integration" title="Permanent link">&para;</a></h2>
+<p>TSM integrates the governing equation using explicit Euler time stepping. The water volume and surface area are held constant over a time step and are refreshed from the transport model at the start of each step. Temperature updates are clipped to physically plausible bounds to guard against instability in the rare event of a very short or very long time step.</p>
+<p>See the <a href="../../../theory/numerical-methods/">Numerical Methods</a> page for the general integration scheme used across all ClearWater modules.</p>
 
 
 

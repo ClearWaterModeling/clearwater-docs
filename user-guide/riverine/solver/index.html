@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#solver" class="md-skip">
+        <a href="#transport-solver" class="md-skip">
           Skip to content
         </a>
       
@@ -102,8 +102,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="ClearWater Documentation" class="md-header__button md-logo" aria-label="ClearWater Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -423,8 +422,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="ClearWater Documentation" class="md-nav__button md-logo" aria-label="ClearWater Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     ClearWater Documentation
@@ -903,6 +901,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solver
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -919,6 +935,152 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#governing-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governing Equation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finite-volume-discretization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finite Volume Discretization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Finite Volume Discretization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diffusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diffusion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volume Change
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implicit-time-stepping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implicit Time Stepping
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sparse-linear-solve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sparse Linear Solve
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ghost-cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ghost Cells
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-timestep-update-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per-Timestep Update Procedure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-to-completion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running to Completion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numerical-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Numerical Considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2073,6 +2235,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2136,7 +2306,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/standalone-tsm/" class="md-nav__link">
+      <a href="../../../examples/notebooks/getting-started-riverine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 1: Getting Started with Conservative Transport
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/notebooks/standalone-tsm-example/" class="md-nav__link">
         
   
   
@@ -2164,14 +2362,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/coupled-riverine-tsm/" class="md-nav__link">
+      <a href="../../../examples/notebooks/model-architecture/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Coupled Riverine + TSM
+    Clearwater Modules Architecture
   
 
     
@@ -2192,14 +2390,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/coupled-riverine-tsm-nsm1/" class="md-nav__link">
+      <a href="../../../examples/notebooks/coupled-riverine-tsm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Coupled Riverine + TSM + NSM1
+    ClearWater-Riverine Demo 2: Coupling Transport to Water Quality Reactions with ClearWater-Modules
   
 
     
@@ -2220,14 +2418,98 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/sumwere-creek/" class="md-nav__link">
+      <a href="../../../examples/notebooks/coupled-riverine-tsm-fine-mesh/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Sumwere Creek
+    ClearWater-Riverine Demo 2: Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/notebooks/coupled-riverine-tsm-nsm1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 3 (part 1): Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/notebooks/plot-coupled-nsm-simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 3 (part 2): Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/notebooks/ohio-river/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ohio River Model
   
 
     
@@ -2657,6 +2939,141 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#governing-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governing Equation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finite-volume-discretization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finite Volume Discretization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Finite Volume Discretization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diffusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diffusion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volume Change
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implicit-time-stepping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implicit Time Stepping
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sparse-linear-solve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sparse Linear Solve
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ghost-cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ghost Cells
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-timestep-update-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per-Timestep Update Procedure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-to-completion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running to Completion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numerical-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Numerical Considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2675,9 +3092,105 @@
   
 
 
-<h1 id="solver">Solver<a class="headerlink" href="#solver" title="Permanent link">&para;</a></h1>
-<p><em>This page is under development.</em></p>
-<p>This page will describe the advection-diffusion solver used by ClearWater-Riverine, including the finite-volume discretization on the HEC-RAS 2D mesh, time-stepping scheme, and numerical stability considerations.</p>
+<h1 id="transport-solver">Transport Solver<a class="headerlink" href="#transport-solver" title="Permanent link">&para;</a></h1>
+<p>ClearWater-Riverine solves the two-dimensional, depth-averaged advection-diffusion equation on the HEC-RAS 2D unstructured mesh using an implicit finite volume scheme. This page describes the governing equation, the spatial and temporal discretization, the sparse linear solve, and the per-timestep update procedure. The solver is implemented in <code>src/clearwater_riverine/transport.py</code> and <code>src/clearwater_riverine/linalg.py</code>.</p>
+<h2 id="governing-equation">Governing Equation<a class="headerlink" href="#governing-equation" title="Permanent link">&para;</a></h2>
+<p>For a scalar constituent with concentration <code>C</code>, cell volume <code>V</code>, face flow <code>Q</code>, and diffusion coefficient <code>D</code>, the depth-averaged transport equation integrated over one cell is:</p>
+<div class="arithmatex">\[
+\frac{\partial (V C)}{\partial t} + \sum_{\text{faces}} (Q C)_{\text{upwind}} - \sum_{\text{faces}} D A_f \frac{C_{\text{nbr}} - C}{L_f} = 0
+\]</div>
+<p>where <code>A_f</code> is the vertical area of the face, <code>L_f</code> is the distance between the centers of the two cells sharing the face, and the subscript <code>upwind</code> indicates that the advected concentration is taken from the cell on the upwind side of the face.</p>
+<h2 id="finite-volume-discretization">Finite Volume Discretization<a class="headerlink" href="#finite-volume-discretization" title="Permanent link">&para;</a></h2>
+<p>ClearWater-Riverine integrates the transport equation over each cell in the mesh. The spatial operator assembles contributions from every edge.</p>
+<h3 id="advection">Advection<a class="headerlink" href="#advection" title="Permanent link">&para;</a></h3>
+<p>The advection term uses a first-order upwind scheme. For each edge connecting cell <code>i</code> and cell <code>j</code> with face flow <code>Q_ij</code>:</p>
+<ul>
+<li>If <code>Q_ij &gt; 0</code> (flow from <code>i</code> to <code>j</code>), the advected concentration is <code>C_i</code>.</li>
+<li>If <code>Q_ij &lt; 0</code> (flow from <code>j</code> to <code>i</code>), the advected concentration is <code>C_j</code>.</li>
+</ul>
+<p>The upwind choice is stored as the <code>ADVECTION_COEFFICIENT</code> variable on the mesh, with sign indicating the flow direction. Upwinding ensures monotonicity but introduces numerical diffusion proportional to the cell size and the flow speed.</p>
+<h3 id="diffusion">Diffusion<a class="headerlink" href="#diffusion" title="Permanent link">&para;</a></h3>
+<p>The diffusion term uses a standard two-point flux approximation. For each edge between cells <code>i</code> and <code>j</code>:</p>
+<div class="arithmatex">\[
+F_{\text{diff}} = D A_f \frac{C_j - C_i}{L_f}
+\]</div>
+<p>ClearWater-Riverine computes <code>D A_f / L_f</code> once during mesh preparation and stores the result as <code>COEFFICIENT_TO_DIFFUSION_TERM</code> on the mesh. The diffusion coefficient <code>D</code> is the scalar <code>diffusion_coefficient</code> from the configuration.</p>
+<h3 id="volume-change">Volume Change<a class="headerlink" href="#volume-change" title="Permanent link">&para;</a></h3>
+<p>The time derivative <code>partial (V C) / partial t</code> is expanded to account for the time-varying cell volume supplied by HEC-RAS. The framework stores <code>VOLUME</code> at every timestep and <code>CHANGE_IN_TIME</code> as the timestep duration. Volume changes enter the discretization as contributions to both the diagonal of the left-hand side matrix and the right-hand side vector.</p>
+<h2 id="implicit-time-stepping">Implicit Time Stepping<a class="headerlink" href="#implicit-time-stepping" title="Permanent link">&para;</a></h2>
+<p>ClearWater-Riverine uses a fully implicit (backward Euler) time discretization. At each timestep <code>n</code>, the framework assembles and solves:</p>
+<div class="arithmatex">\[
+A\, C^{n+1} = b^n
+\]</div>
+<p>where <code>A</code> is a sparse matrix of size <code>(nreal + 1, nreal + 1)</code> built from the advection and diffusion coefficients and the current cell volumes, and <code>b^n</code> is a vector built from the concentrations at timestep <code>n</code>, boundary inflows at timestep <code>n+1</code>, and the previous cell volumes.</p>
+<p>The implicit scheme is unconditionally stable with respect to advection and diffusion. The timestep is inherited from the HEC-RAS output, so the modeler controls stability and accuracy by choosing the HEC-RAS output interval rather than a separate transport timestep.</p>
+<h2 id="sparse-linear-solve">Sparse Linear Solve<a class="headerlink" href="#sparse-linear-solve" title="Permanent link">&para;</a></h2>
+<p>ClearWater-Riverine builds <code>A</code> as a compressed sparse row (CSR) matrix using <code>scipy.sparse.csr_matrix</code> and solves the system with <code>scipy.sparse.linalg.spsolve</code>. The framework constructs the matrix from three parallel arrays.</p>
+<table>
+<thead>
+<tr>
+<th>Array</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lhs.coef</code></td>
+<td>Matrix coefficients (advection, diffusion, and volume terms).</td>
+</tr>
+<tr>
+<td><code>lhs.rows</code></td>
+<td>Row indices for each coefficient.</td>
+</tr>
+<tr>
+<td><code>lhs.cols</code></td>
+<td>Column indices for each coefficient.</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>LHS</code> class in <code>src/clearwater_riverine/linalg.py</code> exposes an <code>update_values(mesh, t)</code> method that refreshes the three arrays using the flow field at timestep <code>t</code>. Because the matrix depends only on flow and geometry, ClearWater-Riverine assembles <code>A</code> once per timestep and reuses it across all constituents.</p>
+<p>Each constituent owns its own right-hand side vector through the <code>RHS</code> class. The right-hand side is updated per constituent per timestep via <code>b.update_values(solution, mesh, t, name)</code>.</p>
+<h2 id="ghost-cells">Ghost Cells<a class="headerlink" href="#ghost-cells" title="Permanent link">&para;</a></h2>
+<p>HEC-RAS boundary faces connect real cells to ghost cells that live outside the domain. ClearWater-Riverine indexes ghost cells after the real cells, so the total cell count is <code>nreal + nghost</code>. The matrix <code>A</code> has dimension <code>(nreal + 1, nreal + 1)</code> and represents the real cells plus one slot used to apply boundary concentrations. The additional slot receives concentration values taken directly from the aligned boundary condition time series, so boundary inflows appear in <code>A x = b</code> as known forcing rather than as unknowns.</p>
+<h2 id="per-timestep-update-procedure">Per-Timestep Update Procedure<a class="headerlink" href="#per-timestep-update-procedure" title="Permanent link">&para;</a></h2>
+<p>The <code>update</code> method on the <code>ClearwaterRiverine</code> class advances the solution one timestep. The procedure is:</p>
+<ol>
+<li>Refresh the left-hand side arrays for the current timestep with <code>self.lhs.update_values(mesh, time_step)</code>.</li>
+<li>Build <code>A = csr_matrix(...)</code> with shape <code>(nreal + 1, nreal + 1)</code>.</li>
+<li>For each constituent:
+     a. Optionally override the current concentration with a user-supplied value passed via the <code>update_concentration</code> dictionary. This is the hook used by the ClearWater Modules coupling pattern to inject updated state between transport steps.
+     b. Refresh the right-hand side vector using <code>constituent.b.update_values(...)</code>.
+     c. Solve <code>x = spsolve(A, constituent.b.vals)</code>.
+     d. Write <code>x</code> into the mesh at <code>time_step + 1</code>.
+     e. Overwrite cells that carry nonzero boundary condition inputs with the boundary concentration.
+     f. Compute advective, diffusive, and total mass flux across every edge and store the values on the mesh.</li>
+<li>Increment <code>self.time_step</code> by one.</li>
+</ol>
+<p>The mass flux recovery in step 3f reconstructs edge-wise fluxes using the newly solved concentrations, the <code>ADVECTION_COEFFICIENT</code> field, and the <code>COEFFICIENT_TO_DIFFUSION_TERM</code> field. These fluxes are used by the post-processing utilities; see <a href="../post-processing/">Post-Processing</a>.</p>
+<h2 id="running-to-completion">Running to Completion<a class="headerlink" href="#running-to-completion" title="Permanent link">&para;</a></h2>
+<p>A typical simulation loops <code>update</code> across the HEC-RAS time axis and then calls <code>finalize</code> to set plot value ranges and optionally save the mesh.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">clearwater_riverine</span><span class="w"> </span><span class="kn">import</span> <span class="n">ClearwaterRiverine</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">simulation</span> <span class="o">=</span> <span class="n">ClearwaterRiverine</span><span class="p">(</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">config_filepath</span><span class="o">=</span><span class="s2">&quot;configs/ohio_river.yml&quot;</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">simulation</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">time</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">simulation</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">simulation</span><span class="o">.</span><span class="n">finalize</span><span class="p">(</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">save</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">output_filepath</span><span class="o">=</span><span class="s2">&quot;results/ohio_river.zarr&quot;</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">)</span>
+</span></code></pre></div>
+<p>The <code>finalize</code> call writes the ClearWater-Riverine mesh to Zarr and the boundary data to a companion CSV. The saved mesh can be reloaded later for post-processing and plotting by passing <code>mesh_file_path</code> to the <code>ClearwaterRiverine</code> constructor.</p>
+<h2 id="numerical-considerations">Numerical Considerations<a class="headerlink" href="#numerical-considerations" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Mass conservation.</strong> The implicit finite volume scheme is mass-conservative to the accuracy of the linear solve. Residual mass balance error reported by the <a href="../post-processing/">post-processing</a> utilities typically reflects accumulated floating point error and any mismatch between HEC-RAS face flows and volume changes.</li>
+<li><strong>Numerical diffusion.</strong> First-order upwinding introduces artificial diffusion. If the physical diffusion coefficient is small relative to numerical diffusion, the transport solution will appear more diffuse than the underlying problem warrants. Refining the mesh reduces numerical diffusion.</li>
+<li><strong>Negative concentrations.</strong> The implicit upwind scheme is monotone in the absence of steep boundary transients. If negative concentrations appear, check for sharp boundary condition discontinuities and for HEC-RAS cells with very small or zero volume.</li>
+</ul>
 
 
 

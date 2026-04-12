@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#temperature-and-energy-balance-theory" class="md-skip">
+        <a href="#temperature-theory" class="md-skip">
           Skip to content
         </a>
       
@@ -102,8 +102,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="ClearWater Documentation" class="md-header__button md-logo" aria-label="ClearWater Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -423,8 +422,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="ClearWater Documentation" class="md-nav__button md-logo" aria-label="ClearWater Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
     ClearWater Documentation
@@ -1952,6 +1950,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Temperature
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1968,6 +1984,141 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conservation-of-energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conservation of Energy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heat-flux-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heat Flux Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Heat Flux Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shortwave-radiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shortwave Radiation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longwave-radiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Longwave Radiation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latent-heat-evaporation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latent Heat (Evaporation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensible-heat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensible Heat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sediment-heat-flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sediment Heat Flux
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sign-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sign Convention
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physical-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2058,6 +2209,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2121,7 +2280,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/standalone-tsm/" class="md-nav__link">
+      <a href="../../examples/notebooks/getting-started-riverine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 1: Getting Started with Conservative Transport
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/standalone-tsm-example/" class="md-nav__link">
         
   
   
@@ -2149,14 +2336,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/coupled-riverine-tsm/" class="md-nav__link">
+      <a href="../../examples/notebooks/model-architecture/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Coupled Riverine + TSM
+    Clearwater Modules Architecture
   
 
     
@@ -2177,14 +2364,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/coupled-riverine-tsm-nsm1/" class="md-nav__link">
+      <a href="../../examples/notebooks/coupled-riverine-tsm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Coupled Riverine + TSM + NSM1
+    ClearWater-Riverine Demo 2: Coupling Transport to Water Quality Reactions with ClearWater-Modules
   
 
     
@@ -2205,14 +2392,98 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/sumwere-creek/" class="md-nav__link">
+      <a href="../../examples/notebooks/coupled-riverine-tsm-fine-mesh/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Sumwere Creek
+    ClearWater-Riverine Demo 2: Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/coupled-riverine-tsm-nsm1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 3 (part 1): Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/plot-coupled-nsm-simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 3 (part 2): Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/ohio-river/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ohio River Model
   
 
     
@@ -2642,6 +2913,130 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conservation-of-energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conservation of Energy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heat-flux-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heat Flux Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Heat Flux Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shortwave-radiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shortwave Radiation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longwave-radiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Longwave Radiation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latent-heat-evaporation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latent Heat (Evaporation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensible-heat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensible Heat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sediment-heat-flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sediment Heat Flux
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sign-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sign Convention
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physical-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2660,9 +3055,43 @@
   
 
 
-<h1 id="temperature-and-energy-balance-theory">Temperature and Energy Balance Theory<a class="headerlink" href="#temperature-and-energy-balance-theory" title="Permanent link">&para;</a></h1>
-<p><em>This page is under development.</em></p>
-<p>This page will present the theoretical basis for the temperature simulation, including the complete surface energy balance equation, formulations for each heat flux component (shortwave, longwave, evaporative, conductive, sediment), and the equilibrium temperature approach.</p>
+<h1 id="temperature-theory">Temperature Theory<a class="headerlink" href="#temperature-theory" title="Permanent link">&para;</a></h1>
+<p>The Temperature Simulation Module (TSM) applies conservation of energy to a well-mixed water column in each computational cell. This page presents the theoretical basis for the surface energy balance and the heat flux formulations used by TSM. For the specific equations and parameter settings implemented in the module, see the <a href="../../user-guide/tsm/energy-balance/">TSM Energy Balance</a> page.</p>
+<h2 id="conservation-of-energy">Conservation of Energy<a class="headerlink" href="#conservation-of-energy" title="Permanent link">&para;</a></h2>
+<p>For a well-mixed water column of volume <span class="arithmatex">\(V\)</span> and surface area <span class="arithmatex">\(A_s\)</span>, the first law of thermodynamics gives:</p>
+<div class="arithmatex">\[
+\rho_w \, c_{p,w} \, V \, \frac{\partial T_w}{\partial t} = \sum_i q_i \, A_i
+\]</div>
+<p>where the sum runs over all heat flux terms <span class="arithmatex">\(q_i\)</span> (W m<span class="arithmatex">\(^{-2}\)</span>) acting on the corresponding interfacial area <span class="arithmatex">\(A_i\)</span>. The density <span class="arithmatex">\(\rho_w\)</span> and specific heat <span class="arithmatex">\(c_{p,w}\)</span> of water are treated as constants because their variation over the range of natural water temperatures is small.</p>
+<h2 id="heat-flux-components">Heat Flux Components<a class="headerlink" href="#heat-flux-components" title="Permanent link">&para;</a></h2>
+<p>The total surface energy balance decomposes into five components at the air-water interface and one at the sediment-water interface:</p>
+<div class="arithmatex">\[
+q_{\text{net}} = q_{sw} + q_{lw,in} - q_{lw,out} - q_{lat} - q_{sen} + \underbrace{q_{sed} \, (A_b / A_s)}_{\text{bed contribution}}
+\]</div>
+<h3 id="shortwave-radiation">Shortwave Radiation<a class="headerlink" href="#shortwave-radiation" title="Permanent link">&para;</a></h3>
+<p>Incoming shortwave radiation is largely independent of water temperature and depends on solar geometry, atmospheric transmission, and cloud cover. A fraction <span class="arithmatex">\(\alpha_s\)</span> (the surface albedo) is reflected; the remainder is absorbed in the water column. For a well-mixed column, all absorbed shortwave is treated as a surface heat flux.</p>
+<h3 id="longwave-radiation">Longwave Radiation<a class="headerlink" href="#longwave-radiation" title="Permanent link">&para;</a></h3>
+<p>Both the atmosphere and the water surface radiate in the longwave band according to the Stefan-Boltzmann law, modified by an effective emissivity. The net longwave exchange is typically negative (net energy loss) at night and small but variable during the day. Cloud cover enhances downwelling longwave by reflecting water-emitted radiation back to the surface.</p>
+<h3 id="latent-heat-evaporation">Latent Heat (Evaporation)<a class="headerlink" href="#latent-heat-evaporation" title="Permanent link">&para;</a></h3>
+<p>Evaporation removes latent heat from the water at a rate proportional to the vapor pressure deficit between the saturated air immediately above the water surface and the overlying atmosphere. The wind function <span class="arithmatex">\(f(U_w)\)</span> encapsulates the turbulent transfer efficiency. Evaporation is usually the dominant cooling term in summer.</p>
+<h3 id="sensible-heat">Sensible Heat<a class="headerlink" href="#sensible-heat" title="Permanent link">&para;</a></h3>
+<p>Sensible heat transfer is driven by the air-water temperature difference and shares the same wind function as evaporation (Bowen ratio analogy). Sensible heat can go in either direction; the water often loses sensible heat at night and gains it on cold-air days.</p>
+<h3 id="sediment-heat-flux">Sediment Heat Flux<a class="headerlink" href="#sediment-heat-flux" title="Permanent link">&para;</a></h3>
+<p>Heat conducts across the sediment-water interface according to Fourier's law, driven by the temperature gradient between the water and the underlying bed. Sediment heat flux is usually small compared to surface fluxes in deep water but can be significant in shallow streams, where the bed acts as a thermal reservoir that moderates diel temperature swings.</p>
+<h2 id="sign-convention">Sign Convention<a class="headerlink" href="#sign-convention" title="Permanent link">&para;</a></h2>
+<p>All fluxes are written so that positive values add energy to the water column. Loss terms (outgoing longwave, latent, sensible when <span class="arithmatex">\(T_w &gt; T_a\)</span>) appear with negative signs in the governing equation.</p>
+<h2 id="physical-assumptions">Physical Assumptions<a class="headerlink" href="#physical-assumptions" title="Permanent link">&para;</a></h2>
+<p>The TSM energy balance rests on the following standard assumptions:</p>
+<ul>
+<li>The water column is well mixed vertically within each cell (no stratification).</li>
+<li>Density and specific heat of water are constant over the simulated range.</li>
+<li>Shortwave radiation is absorbed uniformly in the water column.</li>
+<li>The surface is a free water surface; ice cover and under-ice processes are not represented explicitly.</li>
+<li>Heat storage in the sediment is represented by a single active layer with prescribed thickness and temperature.</li>
+</ul>
+<p>For stratified reservoirs, ice-covered waters, or systems where vertical temperature structure matters, a more detailed model (for example, CE-QUAL-W2) should be used upstream of ClearWater.</p>
+<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<p>See the <a href="../../user-guide/tsm/energy-balance/">TSM Energy Balance</a> page for the exact flux equations as implemented, and the <a href="../../user-guide/tsm/configuration/">TSM Configuration</a> page for the parameters required to evaluate them.</p>
 
 
 

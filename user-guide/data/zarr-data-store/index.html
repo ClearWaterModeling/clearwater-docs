@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chunkedzarrdatastore" class="md-skip">
+        <a href="#chunked-zarr-data-store" class="md-skip">
           Skip to content
         </a>
       
@@ -102,8 +102,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="ClearWater Documentation" class="md-header__button md-logo" aria-label="ClearWater Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -423,8 +422,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="ClearWater Documentation" class="md-nav__button md-logo" aria-label="ClearWater Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     ClearWater Documentation
@@ -1819,6 +1817,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zarr Data Store
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1835,6 +1851,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-the-zarr-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use the Zarr Backend
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage Layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chunking-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chunking Strategy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-footprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory Footprint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-appending-and-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opening, Appending, and Reading
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#closing-the-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Closing the Store
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Pages
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2073,6 +2196,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2136,7 +2267,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/standalone-tsm/" class="md-nav__link">
+      <a href="../../../examples/notebooks/getting-started-riverine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 1: Getting Started with Conservative Transport
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/notebooks/standalone-tsm-example/" class="md-nav__link">
         
   
   
@@ -2164,14 +2323,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/coupled-riverine-tsm/" class="md-nav__link">
+      <a href="../../../examples/notebooks/model-architecture/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Coupled Riverine + TSM
+    Clearwater Modules Architecture
   
 
     
@@ -2192,14 +2351,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/coupled-riverine-tsm-nsm1/" class="md-nav__link">
+      <a href="../../../examples/notebooks/coupled-riverine-tsm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Coupled Riverine + TSM + NSM1
+    ClearWater-Riverine Demo 2: Coupling Transport to Water Quality Reactions with ClearWater-Modules
   
 
     
@@ -2220,14 +2379,98 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/sumwere-creek/" class="md-nav__link">
+      <a href="../../../examples/notebooks/coupled-riverine-tsm-fine-mesh/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Sumwere Creek
+    ClearWater-Riverine Demo 2: Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/notebooks/coupled-riverine-tsm-nsm1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 3 (part 1): Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/notebooks/plot-coupled-nsm-simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 3 (part 2): Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/notebooks/ohio-river/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ohio River Model
   
 
     
@@ -2657,6 +2900,102 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-the-zarr-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use the Zarr Backend
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage Layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chunking-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chunking Strategy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-footprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory Footprint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-appending-and-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opening, Appending, and Reading
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#closing-the-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Closing the Store
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Pages
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2675,9 +3014,75 @@
   
 
 
-<h1 id="chunkedzarrdatastore">ChunkedZarrDataStore<a class="headerlink" href="#chunkedzarrdatastore" title="Permanent link">&para;</a></h1>
-<p><em>This page is under development.</em></p>
-<p>This page will document the ChunkedZarrDataStore, which provides chunked, out-of-core storage for simulation data using the Zarr format. It will cover configuration options, chunking strategies for spatial and temporal dimensions, and how to read/write simulation results efficiently.</p>
+<h1 id="chunked-zarr-data-store">Chunked Zarr Data Store<a class="headerlink" href="#chunked-zarr-data-store" title="Permanent link">&para;</a></h1>
+<p>The <code>ChunkedZarrDataStore</code> is the disk-backed storage backend for ClearWater-Data. It persists every registered variable as a chunked zarr array, which allows ClearWater to run simulations whose full state history does not fit in memory and to produce output that is readable by any tool in the <code>xarray</code> / <code>zarr</code> ecosystem.</p>
+<h2 id="when-to-use-the-zarr-backend">When to Use the Zarr Backend<a class="headerlink" href="#when-to-use-the-zarr-backend" title="Permanent link">&para;</a></h2>
+<p>Choose the zarr backend when one or more of the following conditions hold:</p>
+<ul>
+<li>The simulation grid times the number of time steps exceeds available RAM.</li>
+<li>Output must persist on disk for post-processing, visualization, or restart.</li>
+<li>Multiple downstream tools (Jupyter notebooks, Dask workflows, external viewers) need random-access reads of the output.</li>
+<li>Simulations run long enough that intermediate crashes would otherwise lose all results.</li>
+</ul>
+<p>For short simulations, unit tests, or single-cell scenarios, the default in-memory backend is simpler.</p>
+<h2 id="storage-layout">Storage Layout<a class="headerlink" href="#storage-layout" title="Permanent link">&para;</a></h2>
+<p>Each registered variable becomes a zarr array under the store's root directory. The array dimensions match the variable's registered dimensions. Attributes such as units and long names are preserved in the zarr metadata.</p>
+<p>A typical on-disk layout for a 2D simulation with state variables <code>T_water</code> and <code>NH4</code> and forcing variable <code>T_air</code> looks like:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sim_output.zarr/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    T_water/
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        .zarray
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        .zattrs
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        0.0, 0.1, ... (chunk files)
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    NH4/
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        ...
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    T_air/
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        ...
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    .zgroup
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    .zattrs
+</span></code></pre></div>
+<h2 id="chunking-strategy">Chunking Strategy<a class="headerlink" href="#chunking-strategy" title="Permanent link">&para;</a></h2>
+<p>Chunks are the fundamental unit of I/O in zarr. Choosing chunk sizes well is the single most important tuning decision for the zarr backend.</p>
+<p>General guidelines:</p>
+<ul>
+<li><strong>Align chunks with access patterns.</strong> ClearWater modules read and write one time slice per step across all cells. A chunk shape such as <code>{"time": 24, "cell": N_cells}</code> (one-day time chunks across the whole grid) works well when access is time-step-sequential.</li>
+<li><strong>Target 1--100 MB per chunk.</strong> Very small chunks generate excessive metadata overhead; very large chunks force loading more than needed.</li>
+<li><strong>Match chunk boundaries to analysis needs.</strong> If downstream analysis aggregates by day or by region, align the chunk boundaries so aggregations touch the minimum number of chunks.</li>
+</ul>
+<p>Specify chunks when constructing the store:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">clearwater_data</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChunkedZarrDataStore</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">store</span> <span class="o">=</span> <span class="n">ChunkedZarrDataStore</span><span class="p">(</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;./sim_output.zarr&quot;</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="s2">&quot;cell&quot;</span><span class="p">:</span> <span class="mi">10000</span><span class="p">},</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="memory-footprint">Memory Footprint<a class="headerlink" href="#memory-footprint" title="Permanent link">&para;</a></h2>
+<p>The zarr backend holds only the active chunks in memory. When a module requests a time slice, the store loads the chunk containing that slice, returns a view, and releases the chunk when it is no longer referenced. Peak memory usage is therefore approximately:</p>
+<div class="arithmatex">\[
+\text{Peak RAM} \approx \sum_{\text{variables}} \text{(chunk size)} \times \text{(active chunks per variable)}
+\]</div>
+<p>For a grid of 100,000 cells, 8-byte floats, and a chunk shape of <code>{"time": 24, "cell": 10000}</code>, each chunk is <span class="arithmatex">\(24 \times 10{,}000 \times 8 = 1.9\)</span> MB. A registry with 15 state variables touches roughly 30 MB when a single time slice is active, independent of the total number of time steps.</p>
+<h2 id="opening-appending-and-reading">Opening, Appending, and Reading<a class="headerlink" href="#opening-appending-and-reading" title="Permanent link">&para;</a></h2>
+<p>Create a new store by passing a path that does not yet exist. Re-open an existing store by passing the same path; the store detects the existing zarr group and attaches to it. Reads can proceed from any tool that understands zarr:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="s2">&quot;./sim_output.zarr&quot;</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">T</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s2">&quot;T_water&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s2">&quot;2024-01-01&quot;</span><span class="p">,</span> <span class="s2">&quot;2024-01-31&quot;</span><span class="p">))</span>
+</span></code></pre></div>
+<h2 id="closing-the-store">Closing the Store<a class="headerlink" href="#closing-the-store" title="Permanent link">&para;</a></h2>
+<p>Call <code>store.close()</code> (or <code>registry.close()</code> if you are working through the registry) when the simulation completes. This flushes any pending writes and finalizes the zarr metadata. Most zarr operations are write-through, so data loss from an unexpected crash is typically limited to the currently buffered chunk.</p>
+<h2 id="performance-tips">Performance Tips<a class="headerlink" href="#performance-tips" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Write one full time slice per step rather than many small per-cell writes. The chunking strategy assumes contiguous spatial writes.</li>
+<li>If the simulation is embarrassingly parallel across cells, ensure that parallel workers write to disjoint chunk regions to avoid contention.</li>
+<li>For long simulations, periodically verify disk usage; zarr produces one small file per chunk, and file-system inode limits can become the binding constraint before disk space does.</li>
+</ul>
+<h2 id="related-pages">Related Pages<a class="headerlink" href="#related-pages" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../variable-registry/">Variable Registry</a> for the API used to read and write variables.</li>
+<li><a href="../overview/">Overview</a> for the broader architecture of ClearWater-Data.</li>
+</ul>
 
 
 

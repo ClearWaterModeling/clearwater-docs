@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hydrodynamic-theory" class="md-skip">
+        <a href="#hydrodynamics" class="md-skip">
           Skip to content
         </a>
       
@@ -102,8 +102,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="ClearWater Documentation" class="md-header__button md-logo" aria-label="ClearWater Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -423,8 +422,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="ClearWater Documentation" class="md-nav__button md-logo" aria-label="ClearWater Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
     ClearWater Documentation
@@ -1924,6 +1922,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hydrodynamics
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1940,6 +1956,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#separation-of-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Separation of Concerns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-coupling-clearwater-riverine-and-hec-ras-2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Coupling: ClearWater-Riverine and HEC-RAS 2D
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extending-to-other-transport-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extending to Other Transport Models
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-implications-for-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Implications for Users
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2058,6 +2137,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2121,7 +2208,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/standalone-tsm/" class="md-nav__link">
+      <a href="../../examples/notebooks/getting-started-riverine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 1: Getting Started with Conservative Transport
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/standalone-tsm-example/" class="md-nav__link">
         
   
   
@@ -2149,14 +2264,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/coupled-riverine-tsm/" class="md-nav__link">
+      <a href="../../examples/notebooks/model-architecture/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Coupled Riverine + TSM
+    Clearwater Modules Architecture
   
 
     
@@ -2177,14 +2292,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/coupled-riverine-tsm-nsm1/" class="md-nav__link">
+      <a href="../../examples/notebooks/coupled-riverine-tsm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Coupled Riverine + TSM + NSM1
+    ClearWater-Riverine Demo 2: Coupling Transport to Water Quality Reactions with ClearWater-Modules
   
 
     
@@ -2205,14 +2320,98 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/sumwere-creek/" class="md-nav__link">
+      <a href="../../examples/notebooks/coupled-riverine-tsm-fine-mesh/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Sumwere Creek
+    ClearWater-Riverine Demo 2: Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/coupled-riverine-tsm-nsm1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 3 (part 1): Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/plot-coupled-nsm-simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 3 (part 2): Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/ohio-river/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ohio River Model
   
 
     
@@ -2642,6 +2841,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#separation-of-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Separation of Concerns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-coupling-clearwater-riverine-and-hec-ras-2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Coupling: ClearWater-Riverine and HEC-RAS 2D
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extending-to-other-transport-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extending to Other Transport Models
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-implications-for-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Implications for Users
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2660,9 +2911,31 @@
   
 
 
-<h1 id="hydrodynamic-theory">Hydrodynamic Theory<a class="headerlink" href="#hydrodynamic-theory" title="Permanent link">&para;</a></h1>
-<p><em>This page is under development.</em></p>
-<p>This page will present the governing equations for hydrodynamic transport in ClearWater-Riverine, including the 2D advection-diffusion equation, how flow fields and geometry are extracted from HEC-RAS, and the finite-volume discretization on unstructured meshes.</p>
+<h1 id="hydrodynamics">Hydrodynamics<a class="headerlink" href="#hydrodynamics" title="Permanent link">&para;</a></h1>
+<p>ClearWater is a water quality kinetics framework. It does not solve the shallow-water equations, the Navier-Stokes equations, or any hydrodynamic transport. Instead, ClearWater couples to an external hydrodynamic model that supplies velocity fields, depths, volumes, and transport fluxes at each time step. The kinetic modules (TSM, NSM1, GSM, CSM, MSM) then operate on each cell to compute the local source, sink, and reaction terms.</p>
+<h2 id="separation-of-concerns">Separation of Concerns<a class="headerlink" href="#separation-of-concerns" title="Permanent link">&para;</a></h2>
+<p>The ClearWater design separates two concerns that are often conflated in legacy water quality models:</p>
+<ul>
+<li><strong>Transport</strong> (advection, dispersion, exchange across cell faces) is handled by the hydrodynamic model.</li>
+<li><strong>Kinetics</strong> (biogeochemical reactions, heat fluxes, settling) is handled by the ClearWater modules.</li>
+</ul>
+<p>Each time step, the hydrodynamic model transports the constituent fields; ClearWater then applies the cell-local kinetic tendencies. This operator-splitting approach is standard in coupled water quality modeling and keeps the kinetic modules independent of any particular hydrodynamic grid or solver.</p>
+<h2 id="supported-coupling-clearwater-riverine-and-hec-ras-2d">Supported Coupling: ClearWater-Riverine and HEC-RAS 2D<a class="headerlink" href="#supported-coupling-clearwater-riverine-and-hec-ras-2d" title="Permanent link">&para;</a></h2>
+<p>The current reference coupling is to HEC-RAS 2D through the <a href="../../user-guide/riverine/">ClearWater-Riverine</a> package. In this configuration:</p>
+<ul>
+<li>HEC-RAS 2D provides cell geometry, water depths, volumes, face velocities, and inter-cell transport fluxes from a pre-computed unsteady hydraulics run.</li>
+<li>ClearWater-Riverine advances the transport of each tracked constituent on the 2D mesh at each time step.</li>
+<li>TSM, NSM1, and the other modules compute the cell-local kinetic tendencies and update the state variables.</li>
+</ul>
+<p>HEC-RAS 2D is run to completion first; ClearWater then reads the hydrodynamic output and advances water quality offline. This one-way coupling is appropriate for water quality studies because biogeochemistry does not affect the hydrodynamic solution at the scales of interest.</p>
+<h2 id="extending-to-other-transport-models">Extending to Other Transport Models<a class="headerlink" href="#extending-to-other-transport-models" title="Permanent link">&para;</a></h2>
+<p>Because ClearWater modules interact with the transport solver only through the data registry (see <a href="../../user-guide/data/overview/">ClearWater-Data</a>), the same kinetic code can be coupled to other transport frameworks. Any model that can supply water depth, cell volume, water temperature forcing, and a time-stepping harness can drive ClearWater. Historical couplings include CE-QUAL-W2, GSSHA, and AdH in their original Fortran implementations.</p>
+<h2 id="practical-implications-for-users">Practical Implications for Users<a class="headerlink" href="#practical-implications-for-users" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Run the hydrodynamic model first and verify its outputs (depths, velocities, mass balance) before launching ClearWater.</li>
+<li>Use the hydrodynamic time step, or a coarser multiple of it, as the ClearWater kinetic time step. Kinetic time steps finer than the hydrodynamic output resolution provide no additional accuracy.</li>
+<li>Boundary conditions for water quality constituents (inflow concentrations, point loads) are applied through the transport model, not directly in the kinetic modules.</li>
+</ul>
 
 
 

@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview-of-the-clearwater-framework" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -102,8 +102,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="ClearWater Documentation" class="md-header__button md-logo" aria-label="ClearWater Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -423,8 +422,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="ClearWater Documentation" class="md-nav__button md-logo" aria-label="ClearWater Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
     ClearWater Documentation
@@ -565,6 +563,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -581,6 +597,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Three Packages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-based-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Process-Based Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chunked-zarr-data-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chunked Zarr Data Layer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hec-ras-coupling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HEC-RAS Coupling
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2058,6 +2137,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2121,7 +2208,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/standalone-tsm/" class="md-nav__link">
+      <a href="../../examples/notebooks/getting-started-riverine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 1: Getting Started with Conservative Transport
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/standalone-tsm-example/" class="md-nav__link">
         
   
   
@@ -2149,14 +2264,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/coupled-riverine-tsm/" class="md-nav__link">
+      <a href="../../examples/notebooks/model-architecture/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Coupled Riverine + TSM
+    Clearwater Modules Architecture
   
 
     
@@ -2177,14 +2292,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/coupled-riverine-tsm-nsm1/" class="md-nav__link">
+      <a href="../../examples/notebooks/coupled-riverine-tsm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Coupled Riverine + TSM + NSM1
+    ClearWater-Riverine Demo 2: Coupling Transport to Water Quality Reactions with ClearWater-Modules
   
 
     
@@ -2205,14 +2320,98 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/sumwere-creek/" class="md-nav__link">
+      <a href="../../examples/notebooks/coupled-riverine-tsm-fine-mesh/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Sumwere Creek
+    ClearWater-Riverine Demo 2: Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/coupled-riverine-tsm-nsm1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 3 (part 1): Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/plot-coupled-nsm-simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClearWater-Riverine Demo 3 (part 2): Coupling Transport to Water Quality Reactions with ClearWater-Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/ohio-river/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ohio River Model
   
 
     
@@ -2642,6 +2841,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Three Packages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-based-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Process-Based Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chunked-zarr-data-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chunked Zarr Data Layer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hec-ras-coupling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HEC-RAS Coupling
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2660,9 +2911,28 @@
   
 
 
-<h1 id="overview-of-the-clearwater-framework">Overview of the ClearWater Framework<a class="headerlink" href="#overview-of-the-clearwater-framework" title="Permanent link">&para;</a></h1>
-<p><em>This page is under development.</em></p>
-<p>This page will provide a high-level overview of the ClearWater framework, including its modular architecture (ClearWater-Riverine, ClearWater-Modules, ClearWater-Data), supported simulation types, and how the components work together to model hydrodynamics, temperature, and water quality.</p>
+<h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
+<p>ClearWater is a Python framework for coupled hydrodynamic and water quality modeling. The framework is designed around the idea that transport and reaction kinetics are separable concerns: a transport engine moves mass through a mesh, and a set of independent process modules compute the sources and sinks that modify constituent concentrations at each cell. This section describes the three packages that make up ClearWater, the Process-based architecture that governs how kinetics are computed, the chunked data layer that enables long simulations, and the HEC-RAS coupling that drives the transport grid.</p>
+<h2 id="the-three-packages">The Three Packages<a class="headerlink" href="#the-three-packages" title="Permanent link">&para;</a></h2>
+<p>ClearWater is distributed as three Python packages that are developed and versioned independently but are designed to be composed into a full simulation.</p>
+<p><strong>ClearWater-Riverine</strong> is a two-dimensional (2D) transport engine. ClearWater-Riverine reads HEC-RAS 2D HDF output, extracts the unstructured mesh geometry, face flows, cell volumes, and water surface elevations, and solves the advection-diffusion equation for an arbitrary number of constituents. ClearWater-Riverine assumes vertical homogeneity, so the model is best suited for riverine and estuarine systems where longitudinal and lateral gradients dominate over vertical stratification.</p>
+<p><strong>ClearWater-Modules</strong> provides the water quality reaction kinetics. The package contains the Temperature Simulation Module (TSM), the General Constituent Simulation Module (GSM), and the Nutrient Simulation Module (NSM1), along with a developing Nutrient Simulation Module II (NSM2). Each module computes the net reaction rate for its state variables at each mesh cell and time step; the resulting source/sink term is applied by the transport engine during integration.</p>
+<p><strong>ClearWater-Data</strong> is the data layer. ClearWater-Data provides a <code>VariableRegistry</code> abstraction that manages state variables across time and mesh dimensions, together with a <code>ChunkedZarrDataStore</code> that backs the registry with a <code>zarr</code> store on disk. This layer decouples the model state from Python process memory, which is the foundation for long-duration simulations.</p>
+<h2 id="process-based-architecture">Process-Based Architecture<a class="headerlink" href="#process-based-architecture" title="Permanent link">&para;</a></h2>
+<p>ClearWater is being refactored onto a unified <code>Process</code> abstract base class. Each kinetic module (temperature, floating algae, benthic algae, nitrogen, and so on) is implemented as a <code>Process</code> subclass that declares its required inputs, produced outputs, and configuration schema. The framework provides a <code>ProcessFactory</code> that instantiates processes from YAML configuration files, and a <code>Model</code> class that orchestrates the run.</p>
+<p>Each <code>Process</code> has a three-phase lifecycle:</p>
+<ol>
+<li><code>init_process</code> -- The process initializes its internal state, reads its configuration, and registers its variables with the <code>VariableRegistry</code>.</li>
+<li><code>run(time, registry)</code> -- The process reads the current state from the registry, computes its kinetic source/sink terms, and writes updated values back to the registry at the specified time index.</li>
+<li><code>finalize_process</code> -- The process releases resources and flushes any buffered output.</li>
+</ol>
+<p>This design makes it possible to add new water quality processes without modifying the transport engine or the data layer, and it enforces explicit coupling between processes via the <code>VariableRegistry</code> rather than through shared Python objects.</p>
+<h2 id="chunked-zarr-data-layer">Chunked Zarr Data Layer<a class="headerlink" href="#chunked-zarr-data-layer" title="Permanent link">&para;</a></h2>
+<p>Long water quality simulations can produce output volumes that exceed available RAM, particularly when many constituents are simulated on fine meshes over multi-year periods. ClearWater addresses this through the <code>ChunkedZarrDataStore</code>, which stores simulation state as a chunked <code>zarr</code> array on disk. The <code>VariableRegistry</code> reads and writes state at a specific time index on demand via <code>get_at_time()</code> and <code>set_at_time()</code>, so only the currently active chunks are resident in memory.</p>
+<p>This architecture enables out-of-core time stepping, where the model streams through a long simulation without holding the full time history in RAM, and it produces a self-describing <code>xarray</code>-compatible output dataset that can be analyzed incrementally.</p>
+<h2 id="hec-ras-coupling">HEC-RAS Coupling<a class="headerlink" href="#hec-ras-coupling" title="Permanent link">&para;</a></h2>
+<p>ClearWater-Riverine couples to HEC-RAS 2D as a post-processor on the HEC-RAS hydrodynamic solution. A typical workflow runs an unsteady HEC-RAS 2D simulation to produce a plan HDF file, then ClearWater-Riverine reads the HDF file to extract the mesh topology and the time series of face-averaged flows, cell volumes, and water surface elevations. ClearWater-Riverine then solves the transport equation on the HEC-RAS mesh using the HEC-RAS time step, and the ClearWater-Modules processes compute reaction kinetics at each step.</p>
+<p>Because ClearWater reads HEC-RAS output rather than running inside HEC-RAS, users can leverage existing HEC-RAS 2D models of rivers, reservoirs, and floodplains for water quality studies without reconfiguring or re-running the hydrodynamic solution.</p>
 
 
 
