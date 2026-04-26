@@ -3782,7 +3782,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </style>
 <!-- End of mermaid configuration --><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f7e06d67">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=69317f50">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3795,19 +3795,21 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=20eabbe4">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8d7196a5">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>!!! note "Code cells ship without committed outputs"</p>
-<pre><code>The cells below show the full transport-engine workflow but do not include committed cell outputs because the 110 MB HEC-RAS 2D plan HDF (`OhioRiver_m.p22.hdf`) is not bundled with the documentation. Fetch the HDF as described in `docs/examples/data/ohio_river/README.md` and re-execute the notebook to populate the outputs in place. The animated reference figures in sections 5 and 6 below show what the populated outputs look like.</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Code cells ship without committed outputs</p>
+<p>The cells below show the full transport-engine workflow but do not include committed cell outputs because the 110 MB HEC-RAS 2D plan HDF (<code>OhioRiver_m.p22.hdf</code>) is not bundled with the documentation. Fetch the HDF as described in <code>docs/examples/data/ohio_river/README.md</code> and re-execute the notebook to populate the outputs in place. The animated reference figures in sections 5 and 6 below show what the populated outputs look like.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=26ab837a">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c5516e81">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3820,13 +3822,15 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <li><code>efdc/efdc_ohio_river_model_shapefile/</code> -- EFDC mesh (used for plotting the reference solution)</li>
 <li><code>efdc/ohio_river-2010.parquet/</code> -- EFDC simulated E. coli on the EFDC mesh</li>
 </ul>
-<p>!!! note "HEC-RAS plan HDF is fetched separately"</p>
-<pre><code>The HEC-RAS 2D plan HDF (`OhioRiver_m.p22.hdf`, approximately 110 MB) is not committed to this documentation repository. See `docs/examples/data/ohio_river/README.md` for fetch instructions. Without the HDF, the imports and setup cells below will load, but `cwr.ClearwaterRiverine(fpath)` will raise a file-not-found error.</code></pre>
+<div class="admonition note">
+<p class="admonition-title">HEC-RAS plan HDF is fetched separately</p>
+<p>The HEC-RAS 2D plan HDF (<code>OhioRiver_m.p22.hdf</code>, approximately 110 MB) is not committed to this documentation repository. See <code>docs/examples/data/ohio_river/README.md</code> for fetch instructions. Without the HDF, the imports and setup cells below will load, but <code>cwr.ClearwaterRiverine(fpath)</code> will raise a file-not-found error.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0904e8fc">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d37581bf">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3837,7 +3841,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0e29a237">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=fba2be1a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3889,7 +3893,7 @@ hv.extension("bokeh")
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2b4e5921">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=36af3b3f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3900,7 +3904,7 @@ hv.extension("bokeh")
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=9bd81100">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=04fbd30b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3956,7 +3960,7 @@ print(f"boundary conditions: {bc_path.exists()}")
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=33f58d97">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f517cd5d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3992,7 +3996,7 @@ ohio.mesh
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=32449156">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e818014b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -4003,7 +4007,7 @@ ohio.mesh
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0797e87e">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=14418f74">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -4033,7 +4037,7 @@ ohio.boundary_conditions(str(bc_path))
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f61a865d">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=88c72892">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -4044,7 +4048,7 @@ ohio.boundary_conditions(str(bc_path))
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=da750d45">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=95fd4520">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -4072,7 +4076,7 @@ ohio.boundary_conditions(str(bc_path))
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=57a869f7">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2f29221e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -4085,7 +4089,7 @@ ohio.boundary_conditions(str(bc_path))
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b4001080">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4e6d4e0d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -4099,7 +4103,7 @@ ohio.boundary_conditions(str(bc_path))
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=87c60f22">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=14c28c3e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -4114,7 +4118,7 @@ ohio.boundary_conditions(str(bc_path))
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=02213509">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5efac34d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
