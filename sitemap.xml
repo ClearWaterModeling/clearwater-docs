@@ -2,238 +2,234 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/api/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/api/data/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/api/modules-v2/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/api/riverine/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/developer/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/developer/adding-a-process/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/developer/architecture/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/developer/contributing/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/developer/testing/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/examples/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
-         <loc>https://clearwatermodeling.github.io/clearwater-docs/examples/notebooks/coupled-riverine-tsm-fine-mesh/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <loc>https://clearwatermodeling.github.io/clearwater-docs/examples/data/ohio_river/</loc>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
-         <loc>https://clearwatermodeling.github.io/clearwater-docs/examples/notebooks/coupled-riverine-tsm-nsm1/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <loc>https://clearwatermodeling.github.io/clearwater-docs/examples/data/willowbend_creek/</loc>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
-         <loc>https://clearwatermodeling.github.io/clearwater-docs/examples/notebooks/coupled-riverine-tsm/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <loc>https://clearwatermodeling.github.io/clearwater-docs/examples/notebooks/01_getting_started_riverine/</loc>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
-         <loc>https://clearwatermodeling.github.io/clearwater-docs/examples/notebooks/getting-started-riverine/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <loc>https://clearwatermodeling.github.io/clearwater-docs/examples/notebooks/02_willowbend_temperature/</loc>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
-         <loc>https://clearwatermodeling.github.io/clearwater-docs/examples/notebooks/model-architecture/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <loc>https://clearwatermodeling.github.io/clearwater-docs/examples/notebooks/03_willowbend_nutrients/</loc>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
-         <loc>https://clearwatermodeling.github.io/clearwater-docs/examples/notebooks/ohio-river/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <loc>https://clearwatermodeling.github.io/clearwater-docs/examples/notebooks/04_ohio_river_transport/</loc>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
-         <loc>https://clearwatermodeling.github.io/clearwater-docs/examples/notebooks/plot-coupled-nsm-simulation/</loc>
-         <lastmod>2026-04-22</lastmod>
-    </url>
-    <url>
-         <loc>https://clearwatermodeling.github.io/clearwater-docs/examples/notebooks/standalone-tsm-example/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <loc>https://clearwatermodeling.github.io/clearwater-docs/examples/notebooks/_willowbend_nutrients_helpers/</loc>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/getting-started/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/getting-started/installation/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/getting-started/overview/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/getting-started/quickstart/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/release-notes/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/theory/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/theory/hydrodynamics/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/theory/kinetics/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/theory/numerical-methods/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/theory/temperature/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/data/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/data/overview/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/data/variable-registry/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/data/zarr-data-store/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/gsm/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/gsm/configuration/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/gsm/overview/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/nsm1/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/nsm1/alkalinity/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/nsm1/benthic-algae/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/nsm1/carbon/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/nsm1/cbod/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/nsm1/dissolved-oxygen/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/nsm1/floating-algae/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/nsm1/nitrogen/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/nsm1/overview/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/nsm1/pathogens/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/nsm1/phosphorus/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/riverine/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/riverine/boundaries/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/riverine/configuration/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/riverine/overview/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/riverine/plotting/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/riverine/post-processing/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/riverine/solver/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/tsm/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/tsm/configuration/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/tsm/energy-balance/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://clearwatermodeling.github.io/clearwater-docs/user-guide/tsm/overview/</loc>
-         <lastmod>2026-04-22</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
 </urlset>
